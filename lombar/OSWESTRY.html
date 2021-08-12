@@ -1,0 +1,608 @@
+<!DOCTYPE HTML>
+<!--
+	Criado por: Mardeson Herculano Acácio
+	Liga de Fisioterapia Esportiva
+	Universidade Federal do Ceará
+	Todos os direitos reservados
+-->
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>OSWESTRY - PQ Online</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="theme-color" content="#26564d">
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+<style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #47867b;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+	</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<!-- Header -->
+		<header id="header">
+					<h1 id="logo"><a href="../index.html">PQ</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="../index.html">Home</a></li>
+							<li>
+								<a href="">Questionários</a>
+								<ul>
+									<li><a href="../geral/geral.html">Geral</a></li>
+									<li><a href="../tornozelo/tornozelo.html">Tornozelo</a></li>
+									<li><a href="../joelho/joelho.html">Joelho</a></li>
+									<li><a href="lombar.html">Lombar</a></li>
+									<li><a href="../ombro/ombro.html">Ombro</a></li>
+									<li><a href="../cotovelo/cotovelo.html">Cotovelo/Punho</a></li>
+									<li><a href="../cervical/cervical.html">Cervical</a></li>
+								</ul>
+							</li>
+							<li><a href="../sobre.html">Sobre Nós</a></li>
+							<li><a href="https://forms.gle/jX4jZ3SVMgvzu4ee8" target="_blank">Reportar Erro</a></li>
+						</ul>
+					</nav>
+				</header>
+ 
+ <div style="display:none;" id="myDiv" class="animate-bottom">
+ <div id="main" class="wrapper style1">
+				 
+						<header class="major">
+							<h2>OSWESTRY</h2>
+						</header> 
+ 
+
+
+		<!-- Form -->
+							<section>
+								<div class="container">
+								<form method="get" action="result-OSWESTRY.html">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall">
+											<input type="text" name="nomepaciente" value="" placeholder="Nome do Paciente" required/>
+										</div>
+
+										<!-- Dor -->
+										<div class="col-12">
+											<h3 align="justify">Seção 1 - Intensidade da Dor</h3>
+										</div>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="nenhuma" value="0" required>
+											<label for="nenhuma">Não sinto dor no momento.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="leve"  value="01" required>
+                                            <label for="leve">A dor é muito leve no momento.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="moderada" value="02" required>
+											<label for="moderada">A dor é moderada no momento.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="razintensa" value="03" required>
+											<label for="razintensa">A dor é razoavelmente intensa no momento.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="muitointensa" value="04" required>
+											<label for="muitointensa">A dor é muito intensa no momento.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="pior" value="05" required>
+											<label for="pior">A dor é a pior que se pode imaginar no momento.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="q1na" value="500" required>
+											<label for="q1na">N/A</label>
+										</div>
+
+									    </li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- Cuidados -->
+										<div class="col-12">
+											<h3 align="justify">Seção 2 - Cuidados Pessoais (lavar-se, vestir-se, etc.)</h3>
+										</div>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q2" id="possosem" value="0" required>
+											<label for="possosem">Posso cuidar de mim mesmo normalmente sem que isso aumente a dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q2" id="possocom"  value="01" required>
+                                            <label for="possocom">Posso cuidar de mim mesmo normalmente, mas sinto muita dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q2" id="lenta" value="02" required>
+											<label for="lenta">Sinto dor ao cuidar de mim mesmo e faço isso lentamente e com cuidado.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q2" id="algumaajuda" value="03" required>
+											<label for="algumaajuda">Necessito de alguma ajuda, porém consigo fazer a maior parte dos meus cuidados pessoais.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q2" id="ajudadi" value="04" required>
+											<label for="ajudadi">Necessito de ajuda diária na maioria dos aspectos de meus cuidados pessoais.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q2" id="naoconsigo" value="05" required>
+											<label for="naoconsigo">Não consigo me vestir, lavo-me com dificuldade e permaneço na cama.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q2" id="q2na" value="500" required>
+											<label for="q2na">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- Levantar Objetos -->
+										<div class="col-12">
+											<h3 align="justify">Seção 3 - Levantar Objetos</h3>
+										</div>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q3" id="consigo" value="0" required>
+											<label for="consigo">Consigo levantar objetos pesados sem aumentar a dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q3" id="consigocomdor"  value="01" required>
+                                            <label for="consigocomdor">Consigo levantar objetos pesados, mas isso aumenta a dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q3" id="posi" value="02" required>
+											<label for="posi">A dor me impede de levantar objetos pesados do chão, mas consigo levantá-los se estiverem convenientemente posicionaods, por exemplo, sobre uma mesa.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q3" id="mod" value="03" required>
+											<label for="mod">A dor me impede de levantar objetos pesados, mas consigo levantar objetos leves a moderados, se estiverem convenientemente posicionados. </label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q3" id="leves" value="04" required>
+											<label for="leves">Consigo levantar apenas objetos muito leves.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q3" id="nada" value="05" required>
+											<label for="nada">Não consigo levantar ou carregar absolutamente nada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q3" id="q3na" value="500" required>
+											<label for="q3na">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- Caminhar -->
+										<div class="col-12">
+											<h3 align="justify">Seção 4 - Caminhar</h3>
+										</div>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i1" value="0" required>
+											<label for="q4i1">A dor não me impede de caminhar qualquer distância.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i2"  value="01" required>
+                                            <label for="q4i2">A dor me impede de caminhar mais de 1.600 metros (aproximadamente 16 quarteirões e 100 metros).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i3" value="02" required>
+											<label for="q4i3">A dor me impede de caminhar mais de 800 metros (aproximadamente 8 quarteirões e 100 metros).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i4" value="03" required>
+											<label for="q4i4">A dor me impede de caminhar mais de 400 metros (aproximadamente 4 quarteirões e 100 metros).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i5" value="04" required>
+											<label for="q4i5">Só consigo andar usando uma bengala ou muletas.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i6" value="05" required>
+											<label for="q4i6">Fico na cama a maior parte do tempo e preciso me arrastar para ir ao banheiro.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4na" value="500" required>
+											<label for="q4na">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- Sentar -->
+										<div class="col-12">
+											<h3 align="justify">Seção 5 - Sentar</h3>
+										</div>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i1" value="0" required>
+											<label for="q5i1">Consigo sentar em qualquer tipo de cadeira durante o tempo que quiser.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i2"  value="01" required>
+                                            <label for="q5i2">Consigo sentar em uma cadeira confortável durante o tempo que quiser.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i3" value="02" required>
+											<label for="q5i3">A dor me impede de ficar sentado por mais de 1 hora.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i4" value="03" required>
+											<label for="q5i4">A dor me impede de ficar sentado por mais de meia hora.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i5" value="04" required>
+											<label for="q5i5">A dor me impede de ficar sentado por mais de 10 minutos.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i6" value="05" required>
+											<label for="q5i6">A dor me impede de sentar.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5na" value="500" required>
+											<label for="q5na">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- Ficar em Pé -->
+										<div class="col-12">
+											<h3 align="justify">Seção 6 - Ficar em Pé</h3>
+										</div>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6i1" value="0" required>
+											<label for="q6i1">Consigo ficar em pé o tempo que quiser sem aumentar a dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6i2"  value="01" required>
+                                            <label for="q6i2">Consigo ficar em pé durante o tempo que quiser, mas isso aumenta a dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6i3" value="02" required>
+											<label for="q6i3">A dor me impede de ficar em pé por mais de 1 hora.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6i4" value="03" required>
+											<label for="q6i4">A dor me impede de ficar em pé por mais de meia hora.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6i5" value="04" required>
+											<label for="q6i5">A dor me impede de ficar em é por mais de 10 minutos.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6i6" value="05" required>
+											<label for="q6i6">A dor me impede de ficar em pé.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6na" value="500" required>
+											<label for="q6na">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- Dormir -->
+										<div class="col-12">
+											<h3 align="justify">Seção 7 - Dormir</h3>
+										</div>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i1" value="0" required>
+											<label for="q7i1">Meu sono nunca é perturbado pela dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i2"  value="01" required>
+                                            <label for="q7i2">Meu sono é ocasionalmente perturbado pela dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i3" value="02" required>
+											<label for="q7i3">Durmo menos de 6 horas por causa da dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i4" value="03" required>
+											<label for="q7i4">Durmo menos de 4 horas por causa da dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i5" value="04" required>
+											<label for="q7i5">Durmo menos de 2 horas por causa da dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i6" value="05" required>
+											<label for="q7i6">A dor me impede totalmente de dormir.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7na" value="500" required>
+											<label for="q7na">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- Vida Sexual -->
+										<div class="col-12">
+											<h3 align="justify">Seção 8 - Vida Sexual</h3>
+										</div>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i1" value="0" required>
+											<label for="q8i1">Minha vida sexual é normal e não aumenta minha dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i2"  value="01" required>
+                                            <label for="q8i2">Minha vida sexual é normal, mas causa um pouco mais de dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i3" value="02" required>
+											<label for="q8i3">Minha vida sexual é quase normal, mas causa muita dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i4" value="03" required>
+											<label for="q8i4">Minha vida sexual é severamente limitada pela minha dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i5" value="04" required>
+											<label for="q8i5">Minha vida sexual é quase ausente por causa da dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i6" value="05" required>
+											<label for="q8i6">A dor me impede de ter uma vida sexual.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8na" value="500" required>
+											<label for="q8na">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- Vida Social -->
+										<div class="col-12">
+											<h3 align="justify">Seção 9 - Vida Social</h3>
+										</div>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q9" id="q9i1" value="0" required>
+											<label for="q9i1">Minha vida social é normal e não aumenta minha dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9" id="q9i2"  value="01" required>
+                                            <label for="q9i2">Minha vida social é normal, mas causa um pouco mais de dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9" id="q9i3" value="02" required>
+											<label for="q9i3">A dor não tem nenhum efeito significativo na minha vida social, porém limita alguns interesses que demandam mais energia, como por exemplo, esporte, etc.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9" id="q9i4" value="03" required>
+											<label for="q9i4">A dor tem restringido minha vida social e não saio de casa com tanta frequência.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9" id="q9i5" value="04" required>
+											<label for="q9i5">A dor tem restringido minha vida social ao meu lar.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9" id="q9i6" value="05" required>
+											<label for="q9i6">Não tenho vida social por causa da dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9" id="q9na" value="500" required>
+											<label for="q9na">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+										
+										<!-- Locomoção -->
+										<div class="col-12">
+											<h3 align="justify">Seção 10 - Locomoção (Ônibus/Carro/Táxi)</h3>
+										</div>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q10" id="q10i1" value="0" required>
+											<label for="q10i1">Posso ir a qualquer lugar sem sentir dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q10" id="q10i2"  value="01" required>
+                                            <label for="q10i2">Posso ir a qualquer lugar, mas isso aumenta a dor.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q10" id="q10i3" value="02" required>
+											<label for="q10i3">A dor é intensa, mas consigo me locomover durante 2 horas.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q10" id="q10i4" value="03" required>
+											<label for="q10i4">A dor restringe-me a locomoções necessárias de menos de 1 hora.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q10" id="q10i5" value="04" required>
+											<label for="q10i5">A dor restringe-me a locomoções necessárias de menos de 30 minutos.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q10" id="q10i6" value="05" required>
+											<label for="q10i6">A dor impede de locomover-me, exceto para receber tratamento.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q10" id="q10na" value="500" required>
+											<label for="q10na">N/A</label>
+										</div>
+
+										<div align="justify" class="col-4 col-12">
+												<input type="submit" value="Enviar" class="button primary fit">
+										</div>
+								</form>
+							</section>
+</div>
+<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="http://instagram.com/lifeufc/" target="_blank" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="mailto:lifeufc@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Liga de Fisioterapia Esportiva - LIFE <p>Universidade Federal do Ceará</p><p>Todos os direitos reservados.</p></li>
+					</ul>
+					<ul class="icons">
+						<li><span class="image"><img src="../assets/imgs/sop.png" alt="" /></span></li>
+					</ul>
+				</footer>
+ </div>
+
+<!--- SCRIPTS --->
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 500);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+</body>
+</html>

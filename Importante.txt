@@ -1,0 +1,14 @@
+Verde Normal
+#47867b
+
+Verde Hover
+#26564d (verde escuro)
+
+Amarelo
+#d8c975
+
+Amarelo Hover
+#baaa5b
+
+ROSA ANTIGO
+#e44c65
