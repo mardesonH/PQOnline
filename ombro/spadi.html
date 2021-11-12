@@ -1,0 +1,649 @@
+    <!DOCTYPE HTML>
+    <!--
+    	Criado por: Mardeson Herculano Acácio
+    	Liga de Fisioterapia Esportiva
+    	Universidade Federal do Ceará
+    	Todos os direitos reservados
+    -->
+    <html>
+    <head>
+    	<meta charset="utf-8" />
+    	<title>SPADI - PQ Online</title>
+    		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+            <meta name="theme-color" content="#26564d">
+    		<link rel="stylesheet" href="../assets/css/style.css" />
+    		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+            <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+    	<script  type="text/javascript">
+    	function bloqueio() {
+    	if
+    	(document.getElementById("divq1").style.display == "none") { 		
+    	document.getElementById("divq1").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divq1").style.display = "none";
+    	}
+    	}
+
+    	function bloqueio2() {
+    	if
+    	(document.getElementById("divq2").style.display == "none") { 		
+    	document.getElementById("divq2").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divq2").style.display = "none";
+    	}
+    	}
+
+    	function bloqueio3() {
+    	if
+    	(document.getElementById("divq3").style.display == "none") { 		
+    	document.getElementById("divq3").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divq3").style.display = "none";
+    	}
+    	}
+
+    	function bloqueio4() {
+    	if
+    	(document.getElementById("divq4").style.display == "none") { 		
+    	document.getElementById("divq4").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divq4").style.display = "none";
+    	}
+    	}
+
+    	function bloqueio5() {
+    	if
+    	(document.getElementById("divq5").style.display == "none") { 		
+    	document.getElementById("divq5").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divq5").style.display = "none";
+    	}
+    	}
+
+    	function bloqueio6() {
+    	if
+    	(document.getElementById("divq6").style.display == "none") { 		
+    	document.getElementById("divq6").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divq6").style.display = "none";
+    	}
+    	}
+
+    	function bloqueio7() {
+    	if
+    	(document.getElementById("divq7").style.display == "none") { 		
+    	document.getElementById("divq7").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divq7").style.display = "none";
+    	}
+    	}
+
+    	function bloqueio8() {
+    	if
+    	(document.getElementById("divq8").style.display == "none") { 		
+    	document.getElementById("divq8").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divq8").style.display = "none";
+    	}
+    	}
+
+    	function bloqueio9() {
+    	if
+    	(document.getElementById("divq9").style.display == "none") { 		
+    	document.getElementById("divq9").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divq9").style.display = "none";
+    	}
+    	}
+
+    	function bloqueio10() {
+    	if
+    	(document.getElementById("divq10").style.display == "none") { 		
+    	document.getElementById("divq10").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divq10").style.display = "none";
+    	}
+    	}
+
+    	function bloqueio11() {
+    	if
+    	(document.getElementById("divq11").style.display == "none") { 		
+    	document.getElementById("divq11").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divq11").style.display = "none";
+    	}
+    	}
+
+    	function bloqueio12() {
+    	if
+    	(document.getElementById("divq12").style.display == "none") { 		
+    	document.getElementById("divq12").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divq12").style.display = "none";
+    	}
+    	}
+
+    	function bloqueio13() {
+    	if
+    	(document.getElementById("divq13").style.display == "none") { 		
+    	document.getElementById("divq13").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divq13").style.display = "none";
+    	}
+    	}
+    	</script>
+
+
+    <style>
+    /* Center the loader */
+    #loader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #47867b;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Add animation to "page content" */
+    .animate-bottom {
+      position: relative;
+      -webkit-animation-name: animatebottom;
+      -webkit-animation-duration: 1s;
+      animation-name: animatebottom;
+      animation-duration: 1s
+    }
+
+    @-webkit-keyframes animatebottom {
+      from { bottom:-100px; opacity:0 } 
+      to { bottom:0px; opacity:1 }
+    }
+
+    @keyframes animatebottom { 
+      from{ bottom:-100px; opacity:0 } 
+      to{ bottom:0; opacity:1 }
+    }
+
+    #myDiv {
+      display: none;
+      text-align: center;
+    }
+
+
+    .slidecontainer {
+      width: 100%;
+    }
+
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 15px;
+      border-radius: 5px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+
+    .slider:hover {
+      opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #47867b;
+      cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #47867b;
+      cursor: pointer;
+    }
+
+    .text1 { float: left; width: 30%; color: #00FFFF;}
+    .text2 { float: right; width: 60%; color: #ff9292;}
+
+
+
+    </style>
+    	</head>
+    <body onload="myFunction()" style="margin:0;">
+
+    <div id="loader"></div>
+
+    <!-- Header -->
+    		<header id="header">
+    					<h1 id="logo"><a href="../index.html">PQ</a></h1>
+    					<nav id="nav">
+    						<ul>
+    							<li><a href="../index.html">Home</a></li>
+    							<li>
+    								<a href="">Questionários</a>
+    								<ul>
+                                    <li><a href="../geral/geral.html">Geral</a></li>
+                                    <li><a href="../tornozelo/tornozelo.html">Tornozelo</a></li>
+                                    <li><a href="../joelho/joelho.html">Joelho</a></li>
+                                    <li><a href="../lombar/lombar.html">Lombar</a></li>
+                                    <li><a href="ombro.html">Ombro</a></li>
+                                    <li><a href="../cotovelo/cotovelo.html">Cotovelo/Punho</a></li>
+                                    <li><a href="../cervical/cervical.html">Cervical</a></li>
+                                </ul>
+    							</li>
+    							<li><a href="../sobre.html">Sobre Nós</a></li>
+    							<li><a href="https://forms.gle/jX4jZ3SVMgvzu4ee8" target="_blank">Reportar Erro</a></li>
+    						</ul>
+    					</nav>
+    				</header>
+     
+     <div style="display:none;" id="myDiv" class="animate-bottom">
+     <div id="main" class="wrapper style1">
+    				 
+    						<header class="major">
+    							<h2>Shoulder Pain and Disability Index - SPADI</h2>
+    						</header> 
+     
+
+
+    		<!-- Form -->
+    							<section>
+    								<div class="container">
+    									<div class="col-3 col-6-medium col-12-xsmall">
+    									<div class="col-3 col-6-medium col-12-xsmall">
+    									
+    										<ul class="actions stacked"></ul></div>
+    								<form method="get" action="result-SPADI.html">
+    									<div class="row gtr-uniform gtr-50">
+    										<div class="col-6 col-12-xsmall">
+    											<input type="text" name="nomepaciente" value="" placeholder="Nome do Paciente" required/>
+    										</div>
+
+    										<!-- Questão 1 -->
+    									<div class="col-12">
+    										<h3 align="justify"><h4><b>Escala de Incapacidade</b></h4><br>
+    										O número zero representa "Sem dificuldade" e o número dez representa "Não conseguiu fazer". Por favor, indique o número que melhor descreve quanta dificuldade você teve para fazer cada uma das atividades durante a semana passada.<br>
+    										Se você não teve a oportunidade de fazer uma das atividades na semana passada, por favor, tente estimar qual número você daria para sua dificuldade.</h3>
+    										</div>
+    										</div>
+    										<h3 align="justify"><br>Durante a semana passada, qual o grau de dificuldade que você teve para:</h3>
+    										<h3 align="justify"><br>1. Lavar seu cabelo com o braço afetado?</h3><input type="checkbox" id="naq1" name="naq1" value="10" onclick="bloqueio()" >
+      										<label for="naq1">Não se aplica</label>
+    										<div id="divq1">
+    										<div align="justify" class="text1">Sem dificuldade</div>
+    										<div align="right" class="text2">Não conseguiu fazer</div>
+    										<ul class=""><li>
+    										<div align="justify"class="col-4 col-12-medium">
+    										<div class="slidecontainer">
+    										<input type="range" min="0" max="10" value="0" class="slider" name="q1" id="myRange"><p><span id="demo"></span></p>
+    									</div>
+    									</div>
+    									</div>
+    								</li>
+    							</ul>
+    										<h3 align="justify"><br>2. Lavar suas costas com o braço afetado?</h3><input type="checkbox" id="naq2" name="naq2" value="10" onclick="bloqueio2()" >
+      										<label for="naq2">Não se aplica</label>
+    										<div id="divq2">
+    										<div align="justify" class="text1">Sem dificuldade</div>
+    										<div align="right" class="text2">Não conseguiu fazer</div>
+    										<ul class=""><li>
+    										<div align="justify"class="col-4 col-12-medium">
+    										<div class="slidecontainer">
+    										<input type="range" min="0" max="10" value="0" class="slider" name="q2" id="myRange2"><p><span id="demo2"></span></p>
+    									</div>
+    									</div>
+    									</div>
+    								</li>
+    							</ul>
+    										<h3 align="justify"><br>3. Vestir uma camiseta ou blusa pela cabeça?</h3><input type="checkbox" id="naq3" name="naq3" value="10" onclick="bloqueio3()" >
+      										<label for="naq3">Não se aplica</label>
+    										<div id="divq3">
+    										<div align="justify" class="text1">Sem dificuldade</div>
+    										<div align="right" class="text2">Não conseguiu fazer</div>
+    										<ul class=""><li>
+    										<div align="justify"class="col-4 col-12-medium">
+    										<div class="slidecontainer">
+    										<input type="range" min="0" max="10" value="0" class="slider" name="q3" id="myRange3"><p><span id="demo3"></span></p>
+    									</div>
+    									</div>
+    									</div>
+    								</li>
+    							</ul>
+    										<h3 align="justify"><br>4. Vestir uma camisa que abotoa?</h3><input type="checkbox" id="naq4" name="naq4" value="10" onclick="bloqueio4()" >
+      										<label for="naq4">Não se aplica</label>
+    										<div id="divq4">
+    										<div align="justify" class="text1">Sem dificuldade</div>
+    										<div align="right" class="text2">Não conseguiu fazer</div>
+    										<ul class=""><li>
+    										<div align="justify"class="col-4 col-12-medium">
+    										<div class="slidecontainer">
+    										<input type="range" min="0" max="10" value="0" class="slider" name="q4" id="myRange4"><p><span id="demo4"></span></p>
+    									</div>
+    									</div>
+    									</div>
+    								</li>
+    							</ul>
+                                            <h3 align="justify"><br>5. Vestir suas calças?</h3><input type="checkbox" id="naq5" name="naq5" value="10" onclick="bloqueio5()" >
+                                            <label for="naq5">Não se aplica</label>
+                                            <div id="divq5">
+                                            <div align="justify" class="text1">Sem dificuldade</div>
+                                            <div align="right" class="text2">Não conseguiu fazer</div>
+                                            <ul class=""><li>
+                                            <div align="justify"class="col-4 col-12-medium">
+                                            <div class="slidecontainer">
+                                            <input type="range" min="0" max="10" value="0" class="slider" name="q5" id="myRange5"><p><span id="demo5"></span></p>
+                                        </div>
+                                        </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                            <h3 align="justify"><br>6. Colocar algo em uma prateleira alta com o braço afetado?</h3><input type="checkbox" id="naq6" name="naq6" value="10" onclick="bloqueio6()" >
+                                            <label for="naq6">Não se aplica</label>
+                                            <div id="divq6">
+                                            <div align="justify" class="text1">Sem dificuldade</div>
+                                            <div align="right" class="text2">Não conseguiu fazer</div>
+                                            <ul class=""><li>
+                                            <div align="justify"class="col-4 col-12-medium">
+                                            <div class="slidecontainer">
+                                            <input type="range" min="0" max="10" value="0" class="slider" name="q6" id="myRange6"><p><span id="demo6"></span></p>
+                                        </div>
+                                        </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                            <h3 align="justify"><br>7. Carregar um objeto pesado de 5Kg (saco grande de arroz) com o braço afetado?</h3><input type="checkbox" id="naq7" name="naq7" value="10" onclick="bloqueio7()" >
+                                            <label for="naq7">Não se aplica</label>
+                                            <div id="divq7">
+                                            <div align="justify" class="text1">Sem dificuldade</div>
+                                            <div align="right" class="text2">Não conseguiu fazer</div>
+                                            <ul class=""><li>
+                                            <div align="justify"class="col-4 col-12-medium">
+                                            <div class="slidecontainer">
+                                            <input type="range" min="0" max="10" value="0" class="slider" name="q7" id="myRange7"><p><span id="demo7"></span></p>
+                                        </div>
+                                        </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                            <h3 align="justify"><br>8. Retirar algo de seu bolso de trás com o braço afetado?</h3><input type="checkbox" id="naq8" name="naq8" value="10" onclick="bloqueio8()" >
+                                            <label for="naq8">Não se aplica</label>
+                                            <div id="divq8">
+                                            <div align="justify" class="text1">Sem dificuldade</div>
+                                            <div align="right" class="text2">Não conseguiu fazer</div>
+                                            <ul class=""><li>
+                                            <div align="justify"class="col-4 col-12-medium">
+                                            <div class="slidecontainer">
+                                            <input type="range" min="0" max="10" value="0" class="slider" name="q8" id="myRange8"><p><span id="demo8"></span></p>
+                                        </div>
+                                        </div>
+                                        </div>
+                                    </li>
+                                </ul></div>
+                                <div class="col-12">
+                                            <h3 align="justify"><br><h4><b>Escala de Dor</b></h4><br>
+                                            O número zero representa "Sem dor" e o número dez representa "A pior dor".<br>
+                                            Por favor, indique o número que melhor descreve quanta dor você sentiu durante a semana passada em cada uma das seguintes situações.</h3>
+                                            </div>
+                                            <h3 align="justify"><br>Se você não teve a oportunidade de fazer uma das atividades na semana passada, por favor, tente estimar qual número você daria para sua dor.</h3>
+                                            <h3 align="justify"><br>1. Qual a intensidade da sua dor quando foi a pior na semana passada?</h3><input type="checkbox" id="naq9" name="naq9" value="10" onclick="bloqueio9()" >
+                                            <label for="naq9">Não se aplica</label>
+                                            <div id="divq9">
+                                            <div align="justify" class="text1">Sem dor</div>
+                                            <div align="right" class="text2">Pior dor</div>
+                                            <ul class=""><li>
+                                            <div align="justify"class="col-4 col-12-medium">
+                                            <div class="slidecontainer">
+                                            <input type="range" min="0" max="10" value="0" class="slider" name="q9" id="myRangeD1"><p><span id="demoD1"></span></p>
+                                        </div>
+                                        </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                            <h3 align="justify"><br>2. Quando se deitou em cima do braço afetado?</h3><input type="checkbox" id="naq10" name="naq10" value="10" onclick="bloqueio10()" >
+                                            <label for="naq10">Não se aplica</label>
+                                            <div id="divq10">
+                                            <div align="justify" class="text1">Sem dor</div>
+                                            <div align="right" class="text2">Pior dor</div>
+                                            <ul class=""><li>
+                                            <div align="justify"class="col-4 col-12-medium">
+                                            <div class="slidecontainer">
+                                            <input type="range" min="0" max="10" value="0" class="slider" name="q10" id="myRangeD2"><p><span id="demoD2"></span></p>
+                                        </div>
+                                        </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                            <h3 align="justify"><br>3. Quando tentou pegar algo em uma prateleira alta com o braço afetado?</h3><input type="checkbox" id="naq11" name="naq11" value="10" onclick="bloqueio11()" >
+                                            <label for="naq11">Não se aplica</label>
+                                            <div id="divq11">
+                                            <div align="justify" class="text1">Sem dor</div>
+                                            <div align="right" class="text2">Pior dor</div>
+                                            <ul class=""><li>
+                                            <div align="justify"class="col-4 col-12-medium">
+                                            <div class="slidecontainer">
+                                            <input type="range" min="0" max="10" value="0" class="slider" name="q11" id="myRangeD3"><p><span id="demoD3"></span></p>
+                                        </div>
+                                        </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                            <h3 align="justify"><br>4. Quando tentou tocar a parte de trás do pescoço com o braço afetado?</h3><input type="checkbox" id="naq12" name="naq12" value="10" onclick="bloqueio12()" >
+                                            <label for="naq12">Não se aplica</label>
+                                            <div id="divq12">
+                                            <div align="justify" class="text1">Sem dor</div>
+                                            <div align="right" class="text2">Pior dor</div>
+                                            <ul class=""><li>
+                                            <div align="justify"class="col-4 col-12-medium">
+                                            <div class="slidecontainer">
+                                            <input type="range" min="0" max="10" value="0" class="slider" name="q12" id="myRangeD4"><p><span id="demoD4"></span></p>
+                                        </div>
+                                        </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                            <h3 align="justify"><br>5. Quando tentou empurrar algo com o braço afetado?</h3><input type="checkbox" id="naq13" name="naq13" value="10" onclick="bloqueio13()" >
+                                            <label for="naq13">Não se aplica</label>
+                                            <div id="divq13">
+                                            <div align="justify" class="text1">Sem dor</div>
+                                            <div align="right" class="text2">Pior dor</div>
+                                            <ul class=""><li>
+                                            <div align="justify"class="col-4 col-12-medium">
+                                            <div class="slidecontainer">
+                                            <input type="range" min="0" max="10" value="0" class="slider" name="q13" id="myRangeD5"><p><span id="demoD5"></span></p>
+                                        </div>
+                                        </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                
+    										<div align="justify" class="col-4 col-12">
+    												<input type="submit" value="Enviar" class="button primary fit">
+    										</div>
+    								</form>
+    							</section>
+
+    </div>
+    <!-- Footer -->
+    				<footer id="footer">
+    					<ul class="icons">
+    						<li><a href="http://instagram.com/lifeufc/" target="_blank" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+    						<li><a href="mailto:lifeufc@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+    					</ul>
+    					<ul class="copyright">
+    						<li>Liga de Fisioterapia Esportiva - LIFE <p>Universidade Federal do Ceará</p><p>Todos os direitos reservados.</p></li>
+    					</ul>
+    					<ul class="icons">
+    						<li><span class="image"><img src="../assets/imgs/sop.png" alt="" /></span></li>
+    					</ul>
+    				</footer>
+     </div>
+
+    <!--- SCRIPTS --->
+    <script>
+    var myVar;
+
+    function myFunction() {
+      myVar = setTimeout(showPage, 500);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+
+    ///////////////////////////////////////Sliders///////////////////////////////////////
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var slider2 = document.getElementById("myRange2");
+    var output2 = document.getElementById("demo2");
+    output2.innerHTML = slider2.value;
+
+    slider2.oninput = function() {
+      output2.innerHTML = this.value;
+    }
+
+    var slider3 = document.getElementById("myRange3");
+    var output3 = document.getElementById("demo3");
+    output3.innerHTML = slider3.value;
+
+    slider3.oninput = function() {
+      output3.innerHTML = this.value;
+    }
+
+    var slider4 = document.getElementById("myRange4");
+    var output4 = document.getElementById("demo4");
+    output4.innerHTML = slider4.value;
+
+    slider4.oninput = function() {
+      output4.innerHTML = this.value;
+    }
+
+    var slider5 = document.getElementById("myRange5");
+    var output5 = document.getElementById("demo5");
+    output5.innerHTML = slider5.value;
+
+    slider5.oninput = function() {
+      output5.innerHTML = this.value;
+    }
+
+    var slider6 = document.getElementById("myRange6");
+    var output6 = document.getElementById("demo6");
+    output6.innerHTML = slider6.value;
+
+    slider6.oninput = function() {
+      output6.innerHTML = this.value;
+    }
+
+    var slider7 = document.getElementById("myRange7");
+    var output7 = document.getElementById("demo7");
+    output7.innerHTML = slider7.value;
+
+    slider7.oninput = function() {
+      output7.innerHTML = this.value;
+    }
+
+    var slider8 = document.getElementById("myRange8");
+    var output8 = document.getElementById("demo8");
+    output8.innerHTML = slider8.value;
+
+    slider8.oninput = function() {
+      output8.innerHTML = this.value;
+    }
+
+    var sliderD1 = document.getElementById("myRangeD1");
+    var outputD1 = document.getElementById("demoD1");
+    outputD1.innerHTML = sliderD1.value;
+
+    sliderD1.oninput = function() {
+      outputD1.innerHTML = this.value;
+    }
+
+    var sliderD2 = document.getElementById("myRangeD2");
+    var outputD2 = document.getElementById("demoD2");
+    outputD2.innerHTML = sliderD2.value;
+
+    sliderD2.oninput = function() {
+      outputD2.innerHTML = this.value;
+    }
+
+    var sliderD3 = document.getElementById("myRangeD3");
+    var outputD3 = document.getElementById("demoD3");
+    outputD3.innerHTML = sliderD3.value;
+
+    sliderD3.oninput = function() {
+      outputD3.innerHTML = this.value;
+    }
+
+    var sliderD4 = document.getElementById("myRangeD4");
+    var outputD4 = document.getElementById("demoD4");
+    outputD4.innerHTML = sliderD4.value;
+
+    sliderD4.oninput = function() {
+      outputD4.innerHTML = this.value;
+    }
+
+    var sliderD5 = document.getElementById("myRangeD5");
+    var outputD5 = document.getElementById("demoD5");
+    outputD5.innerHTML = sliderD5.value;
+
+    sliderD5.oninput = function() {
+      outputD5.innerHTML = this.value;
+    }
+
+    </script>
+
+    			<script src="../assets/js/jquery.min.js"></script>
+    			<script src="../assets/js/jquery.scrolly.min.js"></script>
+    			<script src="../assets/js/jquery.dropotron.min.js"></script>
+    			<script src="../assets/js/jquery.scrollex.min.js"></script>
+    			<script src="../assets/js/browser.min.js"></script>
+    			<script src="../assets/js/breakpoints.min.js"></script>
+    			<script src="../assets/js/util.js"></script>
+    			<script src="../assets/js/main.js"></script>
+    </body>
+    </html>
