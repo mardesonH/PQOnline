@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<!--
+	Criado por: Mardeson Herculano Acácio
+	Liga de Fisioterapia Esportiva
+	Universidade Federal do Ceará
+	Todos os direitos reservados
+-->
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>PHQ-9 - PQ Online</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="theme-color" content="#26564d">
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+<style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #47867b;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+	<script src="../assets/js/calculateScorePHQ9.js"></script>
+	</head>
+<body onload="myFunction();notificarUsuario77();" style="margin:0;">
+
+<div id="loader"></div>
+
+<!-- Header -->
+		<header id="header">
+					<h1 id="logo"><a href="../index.html">PQ</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="../index.html">Home</a></li>
+							<li>
+								<a href="">Questionários</a>
+								<ul>
+									<li><a href="geral.html">Geral</a></li>
+									<li><a href="../tornozelo/tornozelo.html">Tornozelo</a></li>
+									<li><a href="../joelho/joelho.html">Joelho</a></li>
+									<li><a href="../lombar/lombar.html">Lombar</a></li>
+									<li><a href="../ombro/ombro.html">Ombro</a></li>
+									<li><a href="../cotovelo/cotovelo.html">Cotovelo/Punho</a></li>
+									<li><a href="../cervical/cervical.html">Cervical</a></li>
+								</ul>
+							</li>
+							<li><a href="../sobre.html">Sobre Nós</a></li>
+							<li><a href="https://forms.gle/jX4jZ3SVMgvzu4ee8" target="_blank">Reportar Erro</a></li>
+						</ul>
+					</nav>
+				</header>
+ 
+ <div style="display:none;" id="myDiv" class="animate-bottom">
+ <div id="main" class="wrapper style1">
+				 
+						<header class="major">
+							<h2>PHQ-9 - RESULTADO</h2>
+						</header> 
+						<header class="major">
+							<h2  id="result-PHQ9"></h2>
+							</header>
+							<div class="col-3 col-6-medium col-12-xsmall">
+									<div class="col-3 col-6-medium col-12-xsmall">
+										<ul class="actions stacked">
+										<p><b>Questionário realizado em:</b></p><p id="data"></p>	
+										</ul>
+										<ul class="actions stacked"><li>
+											<p><b>A pontuação varia entre <b>0 e 27</b>. Quanto <b>maior</b> a pontuação, <b>maior</b> a gravidade do quadro depressivo.</p></li>
+											</ul>
+			
+					<div class="container">
+	<div class="box alt">
+										<div class="col-3 col-6-medium col-12-xsmall">
+									<div class="col-3 col-6-medium col-12-xsmall">
+										<ul class="actions stacked">
+											<li><a href="PHQ9.html" class="button primary fit">Repetir Questionário</a></li>
+											<li><a href="../index.html" class="button primary fit">Voltar à Home</a></li>
+										</ul>
+									</div> </div> </div>
+									<ul class="actions stacked"><li>Fonte: Santos, Iná S., Tavares, Beatriz Franck, Munhoz, Tiago N., Almeida, Laura Sigaran Pio de, Silva, Nathália Tessele Barreto da, Tams, Bernardo Dias, Patella, André Machado, & Matijasevich, Alicia. (2013). Sensibilidade e especificidade do Patient Health Questionnaire-9 (PHQ-9) entre adultos da população geral. Cadernos de Saúde Pública, 29(8), 1533-1543</p></li></ul>
+
+</div>
+<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="http://instagram.com/lifeufc/" target="_blank" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="mailto:lifeufc@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Liga de Fisioterapia Esportiva - LIFE <p>Universidade Federal do Ceará</p><p>Todos os direitos reservados.</p></li>
+					</ul>
+					<ul class="icons">
+						<li><span class="image"><img src="../assets/imgs/sop.png" alt="" /></span></li>
+					</ul>
+				</footer>
+ </div>
+
+<!--- SCRIPTS --->
+
+<script>
+	document.getElementById('data').innerHTML = Date();
+</script>
+
+<script>
+
+var myVar;
+
+function myFunction() {
+	myVar = setTimeout(showPage, 500);
+	
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
+{
+var url_string = window.location.href
+
+var url = new URL(url_string);
+
+var resultado = calculateScorePHQ9(url.searchParams);
+
+document.getElementById('result-PHQ9').append(' ' + resultado);
+}
+
+
+</script>
+
+<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+</body>
+</html>

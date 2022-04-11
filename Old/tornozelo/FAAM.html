@@ -1,0 +1,1481 @@
+<!DOCTYPE HTML>
+<!--
+	Criado por: Mardeson Herculano Acácio
+	Liga de Fisioterapia Esportiva
+	Universidade Federal do Ceará
+	Todos os direitos reservados
+-->
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>FAAM - PQ Online</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="theme-color" content="#26564d">
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+		<script  type="text/javascript">
+    	function bloqueio() {
+    	if
+    	(document.getElementById("divIns").style.display == "none") { 		
+    	document.getElementById("divIns").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divIns").style.display = "none";
+    	}
+    	}</script>
+
+    	<script  type="text/javascript">
+    	function bloqueio2() {
+    	if
+    	(document.getElementById("divTrab").style.display == "none") { 		
+    	document.getElementById("divTrab").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divTrab").style.display = "none";
+    	}
+    	}</script>
+
+<style>
+/* Switch */
+.switch2 {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch2 input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider2 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider2:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider2 {
+  background-color: #26564d;
+}
+
+input:focus + .slider2 {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider2:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider2.round {
+  border-radius: 34px;
+}
+
+.slider2.round:before {
+  border-radius: 50%;
+}
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #47867b;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #47867b;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #47867b;
+  cursor: pointer;
+}
+
+.text1 { float: left; width: 30%; color: #00FFFF;}
+.text2 { float: right; width: 60%; color: #ff9292;}
+
+
+</style>
+	</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<!-- Header -->
+		<header id="header">
+					<h1 id="logo"><a href="../index.html">PQ</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="../index.html">Home</a></li>
+							<li>
+								<a href="">Questionários</a>
+								<ul>
+									<li><a href="../geral/geral.html">Geral</a></li>
+									<li><a href="tornozelo.html">Tornozelo</a></li>
+									<li><a href="../joelho/joelho.html">Joelho</a></li>
+									<li><a href="../lombar/lombar.html">Lombar</a></li>
+									<li><a href="../ombro/ombro.html">Ombro</a></li>
+									<li><a href="../cotovelo/cotovelo.html">Cotovelo/Punho</a></li>
+									<li><a href="../cervical/cervical.html">Cervical</a></li>
+								</ul>
+							</li>
+							<li><a href="../sobre.html">Sobre Nós</a></li>
+							<li><a href="https://forms.gle/jX4jZ3SVMgvzu4ee8" target="_blank">Reportar Erro</a></li>
+						</ul>
+					</nav>
+				</header>
+ 
+ <div style="display:none;" id="myDiv" class="animate-bottom">
+ <div id="main" class="wrapper style1">
+				 
+						<header class="major">
+							<h2>Foot and Ankle Ability Measure - FAAM</h2>
+						</header> 
+ 
+		<!-- Form -->
+							<section>
+								<div class="container">
+								<form method="get" action="result-FAAM.html">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall">
+											<input type="text" name="nomepaciente" value="" placeholder="Nome do Paciente" required/>
+										</div>
+
+										<div class="col-12">
+											<h3 align="justify">Responda por favor a todas as perguntascom arespostaque melhor descrevea sua situaçãona semanapassada.Se aatividadeem  questão  estiver  limitada  por  outra  coisa  que  não  seja  o  seu  pé  ou  tornozelo, marque “Não aplicável” (N/A).</h3>
+										<h3 align="justify">Por causa do seu problema no tornozelo ou pé, quanta dificuldade você tem em:</h3>
+										<ul></ul>
+										<!-- q1 -->
+										<h3 align="justify">1. Ficar em pé</h3>
+										</div>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="q1i1" value="0" required>
+											<label for="q1i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="q1i2"  value="01" required>
+                                            <label for="q1i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="q1i3" value="02" required>
+											<label for="q1i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="q1i4" value="03" required>
+											<label for="q1i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="q1i5" value="04" required>
+											<label for="q1i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="q1NA" value="500" required>
+											<label for="q1NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q2 -->
+										<h3 align="justify">2. Caminhar no plano, em superfície regular</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q2" id="q2i1" value="0" required>
+											<label for="q2i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q2" id="q2i2"  value="01" required>
+                                            <label for="q2i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q2" id="q2i3" value="02" required>
+											<label for="q2i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q2" id="q2i4" value="03" required>
+											<label for="q2i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q2" id="q2i5" value="04" required>
+											<label for="q2i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q2" id="q2NA" value="500" required>
+											<label for="q2NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q3 -->
+										<h3 align="justify">3. Caminhar no plano, em superfície regular, descalço</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q3" id="q3i1" value="0" required>
+											<label for="q3i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q3" id="q3i2"  value="01" required>
+                                            <label for="q3i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q3" id="q3i3" value="02" required>
+											<label for="q3i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q3" id="q3i4" value="03" required>
+											<label for="q3i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q3" id="q3i5" value="04" required>
+											<label for="q3i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q3" id="q3NA" value="500" required>
+											<label for="q3NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q4 -->
+										<h3 align="justify">4. Subir morro</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i1" value="0" required>
+											<label for="q4i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i2"  value="01" required>
+                                            <label for="q4i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i3" value="02" required>
+											<label for="q4i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i4" value="03" required>
+											<label for="q4i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i5" value="04" required>
+											<label for="q4i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4NA" value="500" required>
+											<label for="q4NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q5 -->
+										<h3 align="justify">5. Descer morro</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i1" value="0" required>
+											<label for="q5i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i2"  value="01" required>
+                                            <label for="q5i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i3" value="02" required>
+											<label for="q5i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i4" value="03" required>
+											<label for="q5i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i5" value="04" required>
+											<label for="q5i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5NA" value="500" required>
+											<label for="q5NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q6 -->
+										<h3 align="justify">6. Subir escada</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6i1" value="0" required>
+											<label for="q6i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6i2"  value="01" required>
+                                            <label for="q6i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6i3" value="02" required>
+											<label for="q6i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6i4" value="03" required>
+											<label for="q6i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6i5" value="04" required>
+											<label for="q6i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6NA" value="500" required>
+											<label for="q6NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q7 -->
+										<h3 align="justify">7. Descer escada</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i1" value="0" required>
+											<label for="q7i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i2"  value="01" required>
+                                            <label for="q7i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i3" value="02" required>
+											<label for="q7i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i4" value="03" required>
+											<label for="q7i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i5" value="04" required>
+											<label for="q7i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7NA" value="500" required>
+											<label for="q7NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q8 -->
+										<h3 align="justify">8. Caminhar no plano, em superfície irregular</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i1" value="0" required>
+											<label for="q8i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i2"  value="01" required>
+                                            <label for="q8i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i3" value="02" required>
+											<label for="q8i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i4" value="03" required>
+											<label for="q8i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i5" value="04" required>
+											<label for="q8i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8NA" value="500" required>
+											<label for="q8NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q9 -->
+										<h3 align="justify">9. Subir e descer meio-fio</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q9" id="q9i1" value="0" required>
+											<label for="q9i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9" id="q9i2"  value="01" required>
+                                            <label for="q9i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9" id="q9i3" value="02" required>
+											<label for="q9i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9" id="q9i4" value="03" required>
+											<label for="q9i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9" id="q9i5" value="04" required>
+											<label for="q9i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9" id="q9NA" value="500" required>
+											<label for="q9NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q10 -->
+										<h3 align="justify">10. Agachar</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q10" id="q10i1" value="0" required>
+											<label for="q10i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q10" id="q10i2"  value="01" required>
+                                            <label for="q10i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q10" id="q10i3" value="02" required>
+											<label for="q10i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q10" id="q10i4" value="03" required>
+											<label for="q10i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q10" id="q10i5" value="04" required>
+											<label for="q10i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q10" id="q10NA" value="500" required>
+											<label for="q10NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q11 -->
+										<h3 align="justify">11. Ficar nas pontas dos pés</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q11" id="q11i1" value="0" required>
+											<label for="q11i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q11" id="q11i2"  value="01" required>
+                                            <label for="q11i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q11" id="q11i3" value="02" required>
+											<label for="q11i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q11" id="q11i4" value="03" required>
+											<label for="q11i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q11" id="q11i5" value="04" required>
+											<label for="q11i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q11" id="q11NA" value="500" required>
+											<label for="q11NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q12 -->
+										<h3 align="justify">12. Começar a caminhar</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q12" id="q12i1" value="0" required>
+											<label for="q12i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q12" id="q12i2"  value="01" required>
+                                            <label for="q12i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q12" id="q12i3" value="02" required>
+											<label for="q12i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q12" id="q12i4" value="03" required>
+											<label for="q12i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q12" id="q12i5" value="04" required>
+											<label for="q12i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q12" id="q12NA" value="500" required>
+											<label for="q12NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q13 -->
+										<h3 align="justify">12. Caminhar 5 minutos ou menos</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q13" id="q13i1" value="0" required>
+											<label for="q13i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q13" id="q13i2"  value="01" required>
+                                            <label for="q13i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q13" id="q13i3" value="02" required>
+											<label for="q13i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q13" id="q13i4" value="03" required>
+											<label for="q13i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q13" id="q13i5" value="04" required>
+											<label for="q13i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q13" id="q13NA" value="500" required>
+											<label for="q13NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q14 -->
+										<h3 align="justify">14. Caminhar aproximadamente 10 minutos</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q14" id="q14i1" value="0" required>
+											<label for="q14i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q14" id="q14i2"  value="01" required>
+                                            <label for="q14i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q14" id="q14i3" value="02" required>
+											<label for="q14i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q14" id="q14i4" value="03" required>
+											<label for="q14i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q14" id="q14i5" value="04" required>
+											<label for="q14i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q14" id="q14NA" value="500" required>
+											<label for="q14NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q15 -->
+										<h3 align="justify">15. Caminhar 15 minutos ou mais</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q15" id="q15i1" value="0" required>
+											<label for="q15i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q15" id="q15i2"  value="01" required>
+                                            <label for="q15i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q15" id="q15i3" value="02" required>
+											<label for="q15i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q15" id="q15i4" value="03" required>
+											<label for="q15i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q15" id="q15i5" value="04" required>
+											<label for="q15i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q15" id="q15NA" value="500" required>
+											<label for="q15NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q16 -->
+										<h3 align="justify">16. Atividades domésticas</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q16" id="q16i1" value="0" required>
+											<label for="q16i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q16" id="q16i2"  value="01" required>
+                                            <label for="q16i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q16" id="q16i3" value="02" required>
+											<label for="q16i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q16" id="q16i4" value="03" required>
+											<label for="q16i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q16" id="q16i5" value="04" required>
+											<label for="q16i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q16" id="q16NA" value="500" required>
+											<label for="q16NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q17 -->
+										<h3 align="justify">17. Atividades de vida diária</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q17" id="q17i1" value="0" required>
+											<label for="q17i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q17" id="q17i2"  value="01" required>
+                                            <label for="q17i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q17" id="q17i3" value="02" required>
+											<label for="q17i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q17" id="q17i4" value="03" required>
+											<label for="q17i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q17" id="q17i5" value="04" required>
+											<label for="q17i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q17" id="q17NA" value="500" required>
+											<label for="q17NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q18 -->
+										<h3 align="justify">18. Cuidado pessoal</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q18" id="q18i1" value="0" required>
+											<label for="q18i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q18" id="q18i2"  value="01" required>
+                                            <label for="q18i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q18" id="q18i3" value="02" required>
+											<label for="q18i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q18" id="q18i4" value="03" required>
+											<label for="q18i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q18" id="q18i5" value="04" required>
+											<label for="q18i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q18" id="q18NA" value="500" required>
+											<label for="q18NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q19 -->
+										<h3 align="justify">19. Trabalho leve a moderado que exija caminhar ou ficar em pé</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q19" id="q19i1" value="0" required>
+											<label for="q19i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q19" id="q19i2"  value="01" required>
+                                            <label for="q19i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q19" id="q19i3" value="02" required>
+											<label for="q19i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q19" id="q19i4" value="03" required>
+											<label for="q19i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q19" id="q19i5" value="04" required>
+											<label for="q19i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q19" id="q19NA" value="500" required>
+											<label for="q19NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q20 -->
+										<h3 align="justify">20. Trabalho pesado (empurrar/puxar, subir/descer escada, carregar)</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q20" id="q20i1" value="0" required>
+											<label for="q20i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q20" id="q20i2"  value="01" required>
+                                            <label for="q20i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q20" id="q20i3" value="02" required>
+											<label for="q20i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q20" id="q20i4" value="03" required>
+											<label for="q20i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q20" id="q20i5" value="04" required>
+											<label for="q20i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q20" id="q20NA" value="500" required>
+											<label for="q20NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q21 -->
+										<h3 align="justify">21. Atividades recreativas</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q21" id="q21i1" value="0" required>
+											<label for="q21i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q21" id="q21i2"  value="01" required>
+                                            <label for="q21i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q21" id="q21i3" value="02" required>
+											<label for="q21i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q21" id="q21i4" value="03" required>
+											<label for="q21i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q21" id="q21i5" value="04" required>
+											<label for="q21i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q21" id="q21NA" value="500" required>
+											<label for="q21NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<div class="col-12">
+										<h3 align="justify">De 0 a 100, como você classificaria seu nível atual de função durante atividades de vida diária usuais, sendo que 100 corresponde ao <b>mesmo nível de função anterior ao seu problema do pé ou tornozelo</b> e 0 corresponde a <b>incapacidade</b> em desempenhar qualquer das suas atividades diárias usuais?</h3>
+										</div>
+										<ul class=""><li>
+										<div align="justify"class="col-4 col-12-medium">
+										<div class="slidecontainer">
+										<input type="range" min="0" max="100" value="0" class="slider" name="FVD" id="myRange"><p><span id="demo"></span></p>
+									</div>
+								</li>
+							</ul>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+									<div class="col-12">
+											<h3 align="justify">FAAM - ESCALA DE ESPORTE</h3>
+										<h3 align="justify">Por causa do seu problema no tornozelo ou pé, quanta dificuldade você tem em:</h3>
+										<ul></ul>
+										<!-- d1 -->
+										<h3 align="justify">1. Correr</h3>
+										</div>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="d1" id="d1i1" value="0" required>
+											<label for="d1i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d1" id="d1i2"  value="01" required>
+                                            <label for="d1i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d1" id="d1i3" value="02" required>
+											<label for="d1i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d1" id="d1i4" value="03" required>
+											<label for="d1i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d1" id="d1i5" value="04" required>
+											<label for="d1i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d1" id="d1NA" value="500" required>
+											<label for="d1NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- d2 -->
+										<h3 align="justify">2. Pular</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="d2" id="d2i1" value="0" required>
+											<label for="d2i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d2" id="d2i2"  value="01" required>
+                                            <label for="d2i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d2" id="d2i3" value="02" required>
+											<label for="d2i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d2" id="d2i4" value="03" required>
+											<label for="d2i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d2" id="d2i5" value="04" required>
+											<label for="d2i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d2" id="d2NA" value="500" required>
+											<label for="d2NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- d3 -->
+										<h3 align="justify">3. Amortecer o salto</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="d3" id="d3i1" value="0" required>
+											<label for="d3i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d3" id="d3i2"  value="01" required>
+                                            <label for="d3i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d3" id="d3i3" value="02" required>
+											<label for="d3i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d3" id="d3i4" value="03" required>
+											<label for="d3i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d3" id="d3i5" value="04" required>
+											<label for="d3i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d3" id="d3NA" value="500" required>
+											<label for="d3NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- d4 -->
+										<h3 align="justify">4. Arrancar e parar bruscamente</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="d4" id="d4i1" value="0" required>
+											<label for="d4i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d4" id="d4i2"  value="01" required>
+                                            <label for="d4i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d4" id="d4i3" value="02" required>
+											<label for="d4i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d4" id="d4i4" value="03" required>
+											<label for="d4i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d4" id="d4i5" value="04" required>
+											<label for="d4i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d4" id="d4NA" value="500" required>
+											<label for="d4NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- d5 -->
+										<h3 align="justify">5. Realizar passadas laterais rápidas, com mudança brusca de direção</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="d5" id="d5i1" value="0" required>
+											<label for="d5i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d5" id="d5i2"  value="01" required>
+                                            <label for="d5i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d5" id="d5i3" value="02" required>
+											<label for="d5i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d5" id="d5i4" value="03" required>
+											<label for="d5i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d5" id="d5i5" value="04" required>
+											<label for="d5i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d5" id="d5NA" value="500" required>
+											<label for="d5NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- d6 -->
+										<h3 align="justify">6. Atividades de baixo impacto</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="d6" id="d6i1" value="0" required>
+											<label for="d6i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d6" id="d6i2"  value="01" required>
+                                            <label for="d6i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d6" id="d6i3" value="02" required>
+											<label for="d6i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d6" id="d6i4" value="03" required>
+											<label for="d6i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d6" id="d6i5" value="04" required>
+											<label for="d6i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d6" id="d6NA" value="500" required>
+											<label for="d6NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- d7 -->
+										<h3 align="justify">7. Capacidade em desempenhar a atividade com sua técnica normal</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="d7" id="d7i1" value="0" required>
+											<label for="d7i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d7" id="d7i2"  value="01" required>
+                                            <label for="d7i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d7" id="d7i3" value="02" required>
+											<label for="d7i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d7" id="d7i4" value="03" required>
+											<label for="d7i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d7" id="d7i5" value="04" required>
+											<label for="d7i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d7" id="d7NA" value="500" required>
+											<label for="d7NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- d8 -->
+										<h3 align="justify">8. Capacidade em praticar o seu esporte desejado pelo tempo que você gostaria</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="d8" id="d8i1" value="0" required>
+											<label for="d8i1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d8" id="d8i2"  value="01" required>
+                                            <label for="d8i2">Dificuldade ligeira.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d8" id="d8i3" value="02" required>
+											<label for="d8i3">Dificuldade moderada.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d8" id="d8i4" value="03" required>
+											<label for="d8i4">Dificuldade extrema.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d8" id="d8i5" value="04" required>
+											<label for="d8i5">Incapaz de fazer.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="d8" id="d8NA" value="500" required>
+											<label for="d8NA">N/A</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<div class="col-12">
+										<h3 align="justify">De 0 a 100, como você classificaria seu nível atual de função durante atividades de vida diária usuais, sendo que 100 corresponde ao <b>mesmo nível de função anterior ao seu problema do pé ou tornozelo</b> e 0 corresponde a <b>incapacidade</b> em desempenhar qualquer das suas atividades diárias usuais?</h3>
+										</div>
+										<ul class=""><li>
+										<div align="justify"class="col-4 col-12-medium">
+										<div class="slidecontainer">
+										<input type="range" min="0" max="100" value="0" class="slider" name="FEsp" id="myRange2"><p><span id="demo2"></span></p>
+									</div>
+								</li>
+							</ul>
+									</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- Função atual -->
+										<h3 align="justify">De modo geral, como você classificaria seu nível funcional atual?</h3>
+										<ul class="alt"><li>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="FA" id="FA1"  value="01" required>
+                                            <label for="FA1">Normal</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="FA" id="FA2" value="02" required>
+											<label for="FA2">Quase normal</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="FA" id="FA3" value="03" required>
+											<label for="FA3">Anormal</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="FA" id="FA4" value="04" required>
+											<label for="FA4">Extremamente anormal</label>
+										</div>
+
+
+
+
+
+
+
+
+
+										
+										<div align="justify" class="col-4 col-12">
+												<input type="submit" value="Enviar" class="button primary fit">
+										</div>
+								</form></div>
+							</section>
+</div>
+<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="http://instagram.com/lifeufc/" target="_blank" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="mailto:lifeufc@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Liga de Fisioterapia Esportiva - LIFE <p>Universidade Federal do Ceará</p><p>Todos os direitos reservados.</p></li>
+					</ul>
+					<ul class="icons">
+						<li><span class="image"><img src="../assets/imgs/sop.png" alt="" /></span></li>
+					</ul>
+				</footer>
+ </div>
+
+<!--- SCRIPTS --->
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 500);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value  + "/100";
+
+slider.oninput = function() {
+  output.innerHTML = this.value  + "/100";
+}
+
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("demo2");
+output.innerHTML = slider.value  + "/100";
+
+slider2.oninput = function() {
+  output2.innerHTML = this.value  + "/100";
+}
+
+
+</script>
+
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+</body>
+</html>

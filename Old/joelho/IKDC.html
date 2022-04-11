@@ -1,0 +1,869 @@
+<!DOCTYPE HTML>
+<!--
+	Criado por: Mardeson Herculano Acácio
+	Liga de Fisioterapia Esportiva
+	Universidade Federal do Ceará
+	Todos os direitos reservados
+-->
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>IKDC - PQ Online</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="theme-color" content="#26564d">
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+		<script  type="text/javascript">
+    	function bloqueio() {
+    	if
+    	(document.getElementById("divIns").style.display == "none") { 		
+    	document.getElementById("divIns").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divIns").style.display = "none";
+    	}
+    	}</script>
+
+    	<script  type="text/javascript">
+    	function bloqueio2() {
+    	if
+    	(document.getElementById("divTrab").style.display == "none") { 		
+    	document.getElementById("divTrab").style.display = "block";
+    	}	
+    	else {
+    	document.getElementById("divTrab").style.display = "none";
+    	}
+    	}</script>
+
+<style>
+/* Switch */
+.switch2 {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch2 input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider2 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider2:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider2 {
+  background-color: #26564d;
+}
+
+input:focus + .slider2 {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider2:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider2.round {
+  border-radius: 34px;
+}
+
+.slider2.round:before {
+  border-radius: 50%;
+}
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #47867b;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #47867b;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #47867b;
+  cursor: pointer;
+}
+
+.text1 { float: left; width: 30%; color: #00FFFF;}
+.text2 { float: right; width: 60%; color: #ff9292;}
+
+.text1B { float: left; width: 30%; color: #ff9292;}
+.text2B { float: right; width: 30%; color: #00FFFF;}
+
+
+</style>
+	</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<!-- Header -->
+		<header id="header">
+					<h1 id="logo"><a href="../index.html">PQ</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="../index.html">Home</a></li>
+							<li>
+								<a href="">Questionários</a>
+							<ul>
+									<li><a href="../geral/geral.html">Geral</a></li>
+									<li><a href="../tornozelo/tornozelo.html">Tornozelo</a></li>
+									<li><a href="joelho.html">Joelho</a></li>
+									<li><a href="../lombar/lombar.html">Lombar</a></li>
+									<li><a href="../ombro/ombro.html">Ombro</a></li>
+									<li><a href="../cotovelo/cotovelo.html">Cotovelo/Punho</a></li>
+									<li><a href="../cervical/cervical.html">Cervical</a></li>
+								</ul>
+							</li>
+							<li><a href="../sobre.html">Sobre Nós</a></li>
+							<li><a href="https://forms.gle/jX4jZ3SVMgvzu4ee8" target="_blank">Reportar Erro</a></li>
+						</ul>
+					</nav>
+				</header>
+ 
+ <div style="display:none;" id="myDiv" class="animate-bottom">
+ <div id="main" class="wrapper style1">
+				 
+						<header class="major">
+							<h2>International Knee Documentation Committee Subjective Knee Form - IKDC</h2>
+						</header> 
+ 
+		<!-- Form -->
+							<section>
+								<div class="container">
+								<form method="get" action="result-IKDC.html">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall">
+											<input type="text" name="nomepaciente" value="" placeholder="Nome do Paciente" required/>
+										</div>
+
+										<div class="col-12">
+											<h3 align="justify">SINTOMAS</h3>
+											<h3 align="justify">As  respostas  devem  ser  graduadas  no  mais  alto  nível  de  atividade  que  você  acha  que  pode  executar sem sintomas significativos, mesmo que você não esteja realizando-as regularmente.</h3>
+											<ul></ul>
+										<!-- q1 -->
+										<h3 align="justify">1. Qual é o mais alto nível de atividade física que você pode realizar sem  sentir dor significativa no joelho?</h3>
+										</div>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="q1i1" value="4" required>
+											<label for="q1i1">Atividade muito vigorosa (como saltar ou girar o tronco como no basquete ou futebol).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="q1i2"  value="3" required>
+                                            <label for="q1i2"> Atividade vigorosa (como realizar exercícios físicos intensos como surfe, jogar vôlei ou tênis).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="q1i3" value="2" required>
+											<label for="q1i3">Atividade moderada (como realizar exercícios físicos moderados na academia, correr ou trotar).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="q1i4" value="1" required>
+											<label for="q1i4">Atividade leve (como andar, realizar trabalhos domésticos ou jardinagem).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q1" id="q1i5" value="0" required>
+											<label for="q1i5">Incapaz de realizar qualquer uma das atividades acima em virtude da dor no joelho.</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q2 -->
+										<div class="col-12">
+										<h3 align="justify">2. Desde sua lesão ou durante as últimas quatro semanas, com que freqüência  você tem sentido dor?</h3>
+										</div>
+										<div align="justify" class="text1">Nunca</div>
+										<div align="right" class="text2">Constantemente</div>
+										<ul class=""><li>
+										<div align="justify"class="col-4 col-12-medium">
+										<div class="slidecontainer">
+										<input type="range" min="0" max="10" value="0" class="slider" name="q2" id="myRange"><p><span id="demo"></span></p>
+									</div>
+								</li>
+							</ul>
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q2 -->
+										<div class="col-12">
+										<h3 align="justify">3. Se você tiver dor, qual a intensidade?</h3>
+										</div>
+										<div align="justify" class="text1">Sem dor</div>
+										<div align="right" class="text2">Pior dor imaginável</div>
+										<ul class=""><li>
+										<div align="justify"class="col-4 col-12-medium">
+										<div class="slidecontainer">
+										<input type="range" min="0" max="10" value="0" class="slider" name="q3" id="myRange2"><p><span id="demo2"></span></p>
+									</div>
+								</li>
+							</ul>
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q4 -->
+										<h3 align="justify">4. Desde a sua lesão ou durante as quatro últimas semanas quão rígido ou inchado esteve seu joelho?</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i1" value="4" required>
+											<label for="q4i1">Nem um pouco.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i2"  value="3" required>
+                                            <label for="q4i2">Pouco.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i3" value="2" required>
+											<label for="q4i3">Moderado.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i4" value="1" required>
+											<label for="q4i4">Muito.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q4" id="q4i5" value="0" required>
+											<label for="q4i5">Extremamente.</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q5 -->
+										<h3 align="justify">5. Qual é o mais alto nível de atividade física que você pode realizar sem  que cause inchaço significativo no joelho?</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i1" value="4" required>
+											<label for="q5i1">Atividade muito vigorosa (como saltar ou girar o tronco como no basquete ou futebol).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i2"  value="3" required>
+                                            <label for="q5i2">Atividade vigorosa (como realizar exercícios físicos intensos como surfe, jogar vôlei ou tênis).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i3" value="2" required>
+											<label for="q5i3">Atividade moderada (como realizar exercícios físicos moderados na academia, correr ou trotar).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i4" value="1" required>
+											<label for="q5i4">Atividade leve (como andar, realizar trabalhos domésticos ou jardinagem).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q5" id="q5i5" value="0" required>
+											<label for="q5i5">Incapaz de realizar qualquer uma das atividades acima em virtude do inchaço no joelho.</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<!-- q6 -->
+										<h3 align="justify">6. Desde a sua lesão ou durante as ÚLTIMAS QUATRO SEMANAS seu joelho já travou?</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6i1" value="0" required>
+											<label for="q6i1">Sim.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q6" id="q6i2"  value="01" required>
+                                            <label for="q6i2">Não.</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+
+										<!-- q7 -->
+										<h3 align="justify">7. Qual é o mais alto nível de atividade física que você pode realizar sem falseio significativo no joelho?</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i1" value="4" required>
+											<label for="q7i1">Atividade muito vigorosa (como saltar ou girar o tronco como no basquete ou futebol).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i2"  value="3" required>
+                                            <label for="q7i2">Atividade vigorosa (como realizar exercícios físicos intensos como surfe, jogar vôlei ou tênis).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i3" value="2" required>
+											<label for="q7i3">Atividade moderada (como realizar exercícios físicos moderados na academia, correr ou trotar).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i4" value="1" required>
+											<label for="q7i4">Atividade leve (como andar, realizar trabalhos domésticos ou jardinagem).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q7" id="q7i5" value="0" required>
+											<label for="q7i5">Incapaz de realizar qualquer uma das atividades acima em virtude do falseio no joelho.</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<h3 align="justify">ATIVIDADES ESPORTIVAS</h3>
+
+										<!-- q8 -->
+										<h3 align="justify">8. Qual é o mais alto nível de atividade física que você pode participar de forma regular?</h3>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i1" value="4" required>
+											<label for="q8i1">Atividade muito vigorosa (como saltar ou girar o tronco como no basquete ou futebol).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i2"  value="3" required>
+                                            <label for="q8i2">Atividade vigorosa (como realizar exercícios físicos intensos como surfe, jogar vôlei ou tênis).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i3" value="2" required>
+											<label for="q8i3">Atividade moderada (como realizar exercícios físicos moderados na academia, correr ou trotar).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i4" value="1" required>
+											<label for="q8i4">Atividade leve (como andar, realizar trabalhos domésticos ou jardinagem).</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q8" id="q8i5" value="0" required>
+											<label for="q8i5">Incapaz de realizar qualquer uma das atividades acima em virtude do joelho.</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+
+										<!-- q9 -->
+										<h3 align="justify">9. Quanto o seu joelho afeta a sua habilidade de:</h3>
+										<h4 align="justify">a. Subir escadas</h4>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q9a" id="q9ai1" value="4" required>
+											<label for="q9ai1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9a" id="q9ai2"  value="3" required>
+                                            <label for="q9ai2">Fácil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9a" id="q9ai3" value="2" required>
+											<label for="q9ai3">Moderado.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9a" id="q9ai4" value="1" required>
+											<label for="q9ai4">Difícil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9a" id="q9ai5" value="0" required>
+											<label for="q9ai5">Incapaz.</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<h4 align="justify">b. Descer escadas</h4>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q9b" id="q9bi1" value="4" required>
+											<label for="q9bi1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9b" id="q9bi2"  value="3" required>
+                                            <label for="q9bi2">Fácil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9b" id="q9bi3" value="2" required>
+											<label for="q9bi3">Moderado.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9b" id="q9bi4" value="1" required>
+											<label for="q9bi4">Difícil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9b" id="q9bi5" value="0" required>
+											<label for="q9bi5">Incapaz.</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<h4 align="justify">c. Ajoelhar de frente</h4>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q9c" id="q9ci1" value="4" required>
+											<label for="q9ci1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9c" id="q9ci2"  value="3" required>
+                                            <label for="q9ci2">Fácil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9c" id="q9ci3" value="2" required>
+											<label for="q9ci3">Moderado.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9c" id="q9ci4" value="1" required>
+											<label for="q9ci4">Difícil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9c" id="q9ci5" value="0" required>
+											<label for="q9ci5">Incapaz.</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<h4 align="justify">d. Agachar</h4>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q9d" id="q9di1" value="4" required>
+											<label for="q9di1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9d" id="q9di2"  value="3" required>
+                                            <label for="q9di2">Fácil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9d" id="q9di3" value="2" required>
+											<label for="q9di3">Moderado.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9d" id="q9di4" value="1" required>
+											<label for="q9di4">Difícil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9d" id="q9di5" value="0" required>
+											<label for="q9di5">Incapaz.</label>
+										</div></li></ul>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<h4 align="justify">e. Sentar com os joelhos dobrados</h4>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q9e" id="q9ei1" value="4" required>
+											<label for="q9ei1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9e" id="q9ei2"  value="3" required>
+                                            <label for="q9ei2">Fácil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9e" id="q9ei3" value="2" required>
+											<label for="q9ei3">Moderado.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9e" id="q9ei4" value="1" required>
+											<label for="q9ei4">Difícil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9e" id="q9ei5" value="0" required>
+											<label for="q9ei5">Incapaz.</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<h4 align="justify">f. Levantar-se de uma cadeira</h4>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q9f" id="q9fi1" value="4" required>
+											<label for="q9fi1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9f" id="q9fi2"  value="3" required>
+                                            <label for="q9fi2">Fácil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9f" id="q9fi3" value="2" required>
+											<label for="q9fi3">Moderado.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9f" id="q9fi4" value="1" required>
+											<label for="q9fi4">Difícil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9f" id="q9fi5" value="0" required>
+											<label for="q9fi5">Incapaz.</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<h4 align="justify">g. Correr para frente </h4>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q9g" id="q9gi1" value="4" required>
+											<label for="q9gi1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9g" id="q9gi2"  value="3" required>
+                                            <label for="q9gi2">Fácil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9g" id="q9gi3" value="2" required>
+											<label for="q9gi3">Moderado.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9g" id="q9gi4" value="1" required>
+											<label for="q9gi4">Difícil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9g" id="q9gi5" value="0" required>
+											<label for="q9gi5">Incapaz.</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<h4 align="justify">h. Saltar  e  aterrissar  com  a  perna  lesionada</h4>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q9h" id="q9hi1" value="4" required>
+											<label for="q9hi1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9h" id="q9hi2"  value="3" required>
+                                            <label for="q9hi2">Fácil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9h" id="q9hi3" value="2" required>
+											<label for="q9hi3">Moderado.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9h" id="q9hi4" value="1" required>
+											<label for="q9hi4">Difícil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9h" id="q9hi5" value="0" required>
+											<label for="q9hi5">Incapaz.</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<h4 align="justify">i. Frear e acelerar rapidamente</h4>
+										<ul class="alt"><li>
+										<div align="justify"class="col-4 col-12-medium">
+											<input type="radio" name="q9i" id="q9ii1" value="4" required>
+											<label for="q9ii1">Sem dificuldade.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9i" id="q9ii2"  value="3" required>
+                                            <label for="q9ii2">Fácil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9i" id="q9ii3" value="2" required>
+											<label for="q9ii3">Moderado.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9i" id="q9ii4" value="1" required>
+											<label for="q9ii4">Difícil.</label>
+										</div>
+										<div class="col-6 col-12-xsmall"></div>
+										<div align="justify" class="col-4 col-12-medium">
+											<input type="radio" name="q9i" id="q9ii5" value="0" required>
+											<label for="q9ii5">Incapaz.</label>
+										</div>
+
+										</li>
+										<div class="col-12"></div>
+									    <li>
+										<div class="col-12"></div>
+
+										<h3 align="justify">FUNÇÃO</h3>
+										<!-- q10 -->
+										<div class="col-12">
+										<h3 align="justify">10. Em uma escala de 0 a 10 (sendo 10 normal e 0 incapaz de realizar suas  atividades diárias), como você avaliaria o seu joelho?</h3>
+										<h3 align="justify">Funcionalidade anterior a lesão no joelho:</h3>
+										</div>
+										<div align="justify" class="text1B">Não consegue executar nenhuma atividade da vida diária</div>
+										<div align="right" class="text2B">Sem limitações nas atividades da vida diária</div>
+										<ul class=""><li>
+										<div align="justify"class="col-4 col-12-medium">
+										<div class="slidecontainer">
+										<input type="range" min="0" max="10" value="0" class="slider" name="q10" id="myRange3"><p><span id="demo3"></span></p>
+									</div>
+								</li>
+							</ul>
+
+										<h3 align="justify">Funcionalidade atual do joelho:</h3>
+										<div align="justify" class="text1B">Não consegue executar nenhuma atividade da vida diária</div>
+										<div align="right" class="text2B">Sem limitações nas atividades da vida diária</div>
+										<ul class=""><li>
+										<div align="justify"class="col-4 col-12-medium">
+										<div class="slidecontainer">
+										<input type="range" min="0" max="10" value="0" class="slider" name="q11" id="myRange4"><p><span id="demo4"></span></p>
+								</li>
+							</ul>
+
+
+										<div align="justify" class="col-4 col-12">
+												<input type="submit" value="Enviar" class="button primary fit">
+										</div>
+								</form></div>
+							</section>
+</div>
+<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="http://instagram.com/lifeufc/" target="_blank" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="mailto:lifeufc@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Liga de Fisioterapia Esportiva - LIFE <p>Universidade Federal do Ceará</p><p>Todos os direitos reservados.</p></li>
+					</ul>
+					<ul class="icons">
+						<li><span class="image"><img src="../assets/imgs/sop.png" alt="" /></span></li>
+					</ul>
+				</footer>
+ </div>
+
+<!--- SCRIPTS --->
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 500);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("demo2");
+output.innerHTML = slider.value;
+
+slider2.oninput = function() {
+  output2.innerHTML = this.value;
+}
+
+var slider3 = document.getElementById("myRange3");
+var output3 = document.getElementById("demo3");
+output.innerHTML = slider.value;
+
+slider3.oninput = function() {
+  output3.innerHTML = this.value;
+}
+
+var slider4 = document.getElementById("myRange4");
+var output4 = document.getElementById("demo4");
+output.innerHTML = slider.value;
+
+slider4.oninput = function() {
+  output4.innerHTML = this.value;
+}
+
+
+</script>
+
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+</body>
+</html>
