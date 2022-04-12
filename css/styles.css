@@ -33,7 +33,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #46867B;
+  --bs-primary: hwb(170 27% 47%);
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -74,6 +74,11 @@
   :root {
     scroll-behavior: smooth;
   }
+}
+
+#logo{
+  height: 200px;
+  width: 200px;
 }
 
 body {
@@ -240,7 +245,7 @@ a {
   text-decoration: underline;
 }
 a:hover {
-  color: #c34e2e;
+  color: #d9ca75;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -3037,19 +3042,19 @@ textarea.form-control-lg {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #cf5331;
-  border-color: #c34e2e;
+  background-color: #d9ca75;
+  border-color: #d9ca75;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
-  background-color: #cf5331;
-  border-color: #c34e2e;
-  box-shadow: 0 0 0 0.25rem rgba(246, 122, 88, 0.5);
+  background-color: #d9ca75;
+  border-color: #d9ca75;
+  box-shadow: 0 0 0 0.25rem #d9ca75;
 }
 .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #c34e2e;
-  border-color: #b74a2c;
+  background-color: #d9ca75;
+  border-color: #d9ca75;
 }
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgba(246, 122, 88, 0.5);
@@ -3954,7 +3959,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #c34e2e;
+  color: #d9ca75;
 }
 .nav-link.disabled {
   color: #6c757d;
@@ -4001,7 +4006,7 @@ textarea.form-control-lg {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #46867B;
+  background-color: #;
 }
 
 .nav-fill > .nav-link,
@@ -11379,13 +11384,13 @@ hr.divider-light {
     color: #212529;
   }
   #mainNav.navbar-shrink .navbar-brand:hover {
-    color: #46867B;
+    color: #d9ca75;
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
     color: #212529;
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
-    color: #46867B;
+    color: #d9ca75;
   }
 }
 
