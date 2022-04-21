@@ -1,0 +1,260 @@
+<!-- PHYSIOTHERAPY QUESTIONNAIRES ONLINE 2.0
+Desenvolvido por: Mardeson Herculano
+Repositório: https://github.com/mardesonH/PQOnline 
+-->
+<!DOCTYPE html>
+<html lang="Pt-Br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>VISA-P - PQ Online</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <style>
+            .slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #47867b;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #47867b;
+  cursor: pointer;
+}
+
+.text1 { float: left; width: 30%; color: #ff9292;}
+.text2 { float: right; width: 60%; color: #00FFFF;}
+
+.demo {color: #002922;}
+        </style>
+
+    </head>
+    <body id="page-top">
+        <!-- Nav-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" style="background-color: #46867B;">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="../index.html">PQ Online</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../pages/tornozelo.html">Tornozelo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/joelho.html">Joelho</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/lombar.html">Lombar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/cotovelo.html">Cotovelo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/cervical">Cervical</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/mardesonH/PQOnline" target="blank_">Sobre</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header>
+            
+        </header>
+        
+ 
+
+        <section class="page-section" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                        <h2 class="mt-0">Victorian Institute of Sport Assessment - VISA-P </h2>
+                        <hr class="divider" />
+                        </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                    <div class="col-lg-6">
+                        <form id="VISAP">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="nome" type="text" placeholder="Nome do paciente" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Insira um nome</div>
+                            </div>
+                            <hr/>
+                            <!-- Questão 1 -->
+                            <p>1. Por quantos minutos você consegue ficar sentado sem dor?</p>
+                            <input type="range" min="0" max="10" value="0" class="slider" name="q1" id="range_q1"><p><span id="value_q1"></span>0 min</p>
+                            <br>
+                            <!-- Questão 2 -->
+                            <p>2. Você sente dor ao descer escadas num ritmo de marcha normal?</p>
+                            <div align="justify" class="text1">Dor forte ou severa</div>
+							<div align="right" class="text2">Sem dor</div>
+							<input type="range" min="0" max="10" value="0" class="slider" name="q2" id="range_q2"><p><span id="value_q2"></span></p>
+                            <br>
+                            <!-- Questão 3 -->
+                            <p>3. Você sente dor no joelho quando o estende totalmente de forma ativa e com apoio de peso?</p>
+                            <div align="justify" class="text1">Dor forte ou severa</div>
+							<div align="right" class="text2">Sem dor</div>
+							<input type="range" min="0" max="10" value="0" class="slider" name="q3" id="range_q3"><p><span id="value_q3"></span></p>
+                            <br>
+                            <!-- Questão 4 -->
+                            <p>4. Você sente dor quando faz o exercício afundo com apoio de peso total?</p>
+                            <div class="image" align="center"><img src="../assets/img/afundo.png"></div>
+                            <div align="justify" class="text1">Dor forte ou severa</div>
+							<div align="right" class="text2">Sem dor</div>
+							<input type="range" min="0" max="10" value="0" class="slider" name="q4" id="range_q4"><p><span id="value_q4"></span></p>
+                            <br>
+                            <!-- Questão 5 -->
+                            <p>5. Você tem problemas ao agachar?</p>
+                            <div align="justify" class="text1">Incapaz</div>
+							<div align="right" class="text2">Sem problemas</div>
+							<input type="range" min="0" max="10" value="0" class="slider" name="q5" id="range_q5"><p><span id="value_q5"></span></p>
+                            <br>
+                            <!-- Questão 6 -->
+                            <p>6. Você sente dor durante ou imediatamente após saltitar 10 vezes em uma perna só?</p>
+                            <div align="justify" class="text1">Dor forte ou severa</div>
+							<div align="right" class="text2">Sem dor</div>
+							<input type="range" min="0" max="10" value="0" class="slider" name="q5" id="range_q5"><p><span id="value_q5"></span></p>
+                            <br>
+                            <!-- Questão 7 -->
+                            <p>7. Atualmente, você está praticando algum esporte ou outro tipo de atividade física?</p>
+                            <input type="radio" name="q7" id="q7i1" value="0" required>
+                            <label for="q7i1">Sem dificuldade.</label>
+                            <br>
+                            <input type="radio" name="q7" id="q7i2"  value="04" required>
+                            <label for="q7i2">Dificuldade ligeira.</label>
+                            <br>
+                            <input type="radio" name="q7" id="q7i3"  value="07" required>
+                            <label for="q7i3">Dificuldade moderada.</label>
+                            <br>
+                            <input type="radio" name="q7" id="q7i4"  value="10" required>
+                            <label for="q7i4">Dificuldade extrema.</label>
+                            <br>
+                            <!-- Questão 8 -->
+                            <p>8. Por favor, complete somente uma das questões, A, B ou C, conforme a explicação abaixo:</p>
+                            <ul><li>Se você não sente dor ao praticar esportes, por favor, responda somente a questão <b>8A</b></li></ul>
+							<ul><li>Se você sente dor ao praticar algum esporte, mas esta dor não o impede de praticar a atividade esportiva, por favor, responda somente a questão <b>8B</b></li></ul>
+							</b></li></ul>
+							<ul><li>Se você sente dor que o impede de praticar atividades esportivas, por favor, responda somente a questão <b>8C</b></li></ul>
+										
+
+                            <div id="result"></div>
+
+                            <div class="d-grid"><button class="btn btn-primary btn-xl" id="enviar" type="submit">Enviar</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Desenvolvido por <a href="http://github.com/mardesonH" target="blank_">Mardeson Herculano</a></div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+
+        <script>
+        // Exibir valor do slider nas questões
+        var slider_q1 = document.getElementById("range_q1");
+        var output_q1 = document.getElementById("value_q1");
+        output_q1.innerHTML = slider_q1.value;
+
+        slider_q1.oninput = function() {
+         output_q1.innerHTML = this.value;
+        }
+
+        var slider_q2 = document.getElementById("range_q2");
+        var output_q2 = document.getElementById("value_q2");
+        output_q2.innerHTML = slider_q2.value;
+
+        slider_q2.oninput = function() {
+         output_q2.innerHTML = this.value;
+        }
+
+
+
+
+        </script>
+
+        <script>
+
+        //Definir variáveis do formulário
+        var form = document.querySelector('#VISAP');
+        var botao = document.querySelector('#enviar');
+        var quest = [
+            q1 = 0,
+            q2 = 0,
+            q3 = 0,
+            q4 = 0,
+            q5 = 0,
+        ];
+
+        //Chamar a função 
+        botao.addEventListener('click', function (event) { //Evento de click no botão para chamar a função
+        event.preventDefault();
+        
+        q1 = parseInt(form.q1.value);
+        q2 = parseInt(form.q2.value);
+
+
+        //Saber quantas questões foram válidas        
+        var invalid = 0;
+        if (form.q1.value == 'NA'){ //Questão 1
+        invalid ++
+        q1 = 0;
+        }
+        if (form.q2.value == 'NA'){ //Questão 2
+        invalid ++
+        q2 = 0;
+        }
+        
+
+        //Calcular o resultado do questionário
+        
+        var soma = parseInt(q1) + parseInt(q2); 
+
+        
+
+        document.getElementById('result').innerText = soma //Joga o valor na div
+        console.log(invalid)
+
+
+    });
+        </script>
+
+    </body>
+</html>

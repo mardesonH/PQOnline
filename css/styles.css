@@ -18,7 +18,7 @@
   --bs-red: #dc3545;
   --bs-orange: #46867B;
   --bs-yellow: #ffc107;
-  --bs-green: #198754;
+  --bs-green: #46867B;
   --bs-teal: #20c997;
   --bs-cyan: #0dcaf0;
   --bs-white: #fff;
@@ -11038,10 +11038,22 @@ hr.divider-light {
   }
 }
 
+
+
 header.ankle {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
   background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/ankle.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+header.knee {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/knee.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
