@@ -71,6 +71,7 @@ Repositório: https://github.com/mardesonH/PQOnline
     </head>
     <body id="page-top">
         <!-- Nav-->
+        <div id="no-print">
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" style="background-color: #46867B;">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="../index.html">PQ Online</a>
@@ -87,13 +88,10 @@ Repositório: https://github.com/mardesonH/PQOnline
                 </div>
             </div>
         </nav>
-
+    </div>
         <header>
-            
         </header>
         
- 
-
         <section class="page-section" id="contact">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -106,43 +104,51 @@ Repositório: https://github.com/mardesonH/PQOnline
                     <div class="col-lg-6">
                         <form id="VISAP">
                             <div class="form-floating mb-3">
+                                <div id="only_print">Nome do Paciente:</div>
                                 <input class="form-control" id="nome" type="text" placeholder="Nome do paciente" data-sb-validations="required" />
                                 <div class="invalid-feedback" data-sb-feedback="name:required">Insira um nome</div>
                             </div>
                             <hr/>
+                            <div id="only_print" align="center"><h2>RESULTADO: 25 Pontos</h2>
+                                <br>
+                                <p style="font-size: 12px;"><i>A pontuação total no VISA-P, que representa a gravidade da condição do entrevistado em termos numéricos, varia de 0 a 100 pontos, com uma pontuação máxima indicando a ausência de sintomas e incapacidade.</i></p>
+                                
+                                <br><h4>Respostas</h4>
+                                <hr/>
+                            </div>
                             <!-- Questão 1 -->
                             <p>1. Por quantos minutos você consegue ficar sentado sem dor?</p>
                             <input type="range" min="0" max="10" value="0" class="slider" name="q1" id="range_q1"><p><span id="value_q1"></span>0 min</p>
                             <br>
                             <!-- Questão 2 -->
                             <p>2. Você sente dor ao descer escadas num ritmo de marcha normal?</p>
-                            <div align="justify" class="text1">Dor forte ou severa</div>
-							<div align="right" class="text2">Sem dor</div>
+                            <div align="justify" class="text1" id="no-print">Dor forte ou severa</div>
+							<div align="right" class="text2" id="no-print">Sem dor</div>
 							<input type="range" min="0" max="10" value="0" class="slider" name="q2" id="range_q2"><p><span id="value_q2"></span></p>
                             <br>
                             <!-- Questão 3 -->
                             <p>3. Você sente dor no joelho quando o estende totalmente de forma ativa e com apoio de peso?</p>
-                            <div align="justify" class="text1">Dor forte ou severa</div>
-							<div align="right" class="text2">Sem dor</div>
+                            <div align="justify" class="text1" id="no-print">Dor forte ou severa</div>
+							<div align="right" class="text2" id="no-print">Sem dor</div>
 							<input type="range" min="0" max="10" value="0" class="slider" name="q3" id="range_q3"><p><span id="value_q3"></span></p>
                             <br>
                             <!-- Questão 4 -->
                             <p>4. Você sente dor quando faz o exercício afundo com apoio de peso total?</p>
-                            <div class="image" align="center"><img src="../assets/img/afundo.png"></div>
-                            <div align="justify" class="text1">Dor forte ou severa</div>
-							<div align="right" class="text2">Sem dor</div>
+                            <div class="image" align="center" id="no-print"><img src="../assets/img/afundo.png"></div>
+                            <div align="justify" class="text1" id="no-print">Dor forte ou severa</div>
+							<div align="right" class="text2" id="no-print">Sem dor</div>
 							<input type="range" min="0" max="10" value="0" class="slider" name="q4" id="range_q4"><p><span id="value_q4"></span></p>
                             <br>
                             <!-- Questão 5 -->
                             <p>5. Você tem problemas ao agachar?</p>
-                            <div align="justify" class="text1">Incapaz</div>
-							<div align="right" class="text2">Sem problemas</div>
+                            <div align="justify" class="text1" id="no-print">Incapaz</div>
+							<div align="right" class="text2" id="no-print">Sem problemas</div>
 							<input type="range" min="0" max="10" value="0" class="slider" name="q5" id="range_q5"><p><span id="value_q5"></span></p>
                             <br>
                             <!-- Questão 6 -->
                             <p>6. Você sente dor durante ou imediatamente após saltitar 10 vezes em uma perna só?</p>
-                            <div align="justify" class="text1">Dor forte ou severa</div>
-							<div align="right" class="text2">Sem dor</div>
+                            <div align="justify" class="text1" id="no-print">Dor forte ou severa</div>
+							<div align="right" class="text2" id="no-print">Sem dor</div>
 							<input type="range" min="0" max="10" value="0" class="slider" name="q5" id="range_q5"><p><span id="value_q5"></span></p>
                             <br>
                             <!-- Questão 7 -->
