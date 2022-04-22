@@ -9,7 +9,7 @@ Repositório: https://github.com/mardesonH/PQOnline
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Questionários de Fisioterapia Online" />
         <meta name="author" content="Mardeson Herculano" />
-        <title>VISA-P - PQ Online</title>
+        <title>VISA-A - PQ Online</title>
         <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
@@ -43,14 +43,14 @@ Repositório: https://github.com/mardesonH/PQOnline
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Victorian Institute of Sport Assessment - VISA-P </h2>
+                        <h2 class="mt-0">Victorian Institute of Sport Assessment - VISA-A </h2>
                         <hr class="divider" />
                         </div>
 
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <form id="VISAP">
+                        <form id="VISAA">
                             <div class="form-floating mb-3">
                                 <div id="only_print">Nome do Paciente:</div>
                                 <input class="form-control" id="nome" type="text" placeholder="Nome do paciente" data-sb-validations="required" />
@@ -59,48 +59,45 @@ Repositório: https://github.com/mardesonH/PQOnline
                             <hr/>
                             <div id="only_print" align="center"><div id="resultado_print" ></div>
                                 <br>
-                                <p style="font-size: 12px;"><i>A pontuação total no VISA-P, que representa a gravidade da condição do entrevistado em termos numéricos, varia de 0 a 100 pontos, com uma pontuação máxima indicando a ausência de sintomas e incapacidade.</i></p>
+                                <p style="font-size: 12px;"><i>A pontuação total no VISA-A, que representa a gravidade da condição do entrevistado em termos numéricos, varia de 0 a 100 pontos, com uma pontuação máxima indicando a ausência de sintomas e incapacidade.</i></p>
                                 
                                 <br><h4>Respostas</h4>
                                 <hr/>
                             </div>
                             <!-- Questão 1 -->
-                            <p>1. Por quantos minutos você consegue ficar sentado sem dor?</p>
+                            <p>1. Quando você se levanta, pela manhã, por quantos minutos sente rígida a região do Tendão de Aquiles?</p>
                             <div id="no-print"><input type="range" min="0" max="10" value="0" class="slider" name="q1" id="range_q1"></div><p><span id="value_q1"></span>0 min</p>
                             <div id="no-print"><br></div>
                             <!-- Questão 2 -->
-                            <p>2. Você sente dor ao descer escadas num ritmo de marcha normal?</p>
+                            <p>2. Quando você está preparado/aquecido para o dia, sente dor quando alonga o Tendão de Aquiles ao máximo na borda de um degrau, mantendo os joelhos bem esticados?</p>
                             <div align="justify" class="text1" id="no-print">Dor forte ou severa</div>
 							<div align="right" class="text2" id="no-print">Sem dor</div>
 							<div id="no-print"><input type="range" min="0" max="10" value="0" class="slider" name="q2" id="range_q2"></div><p><span id="value_q2"></span></p>
                             <div id="no-print"><br></div>
                             <!-- Questão 3 -->
-                            <p>3. Você sente dor no joelho quando o estende totalmente de forma ativa e com apoio de peso?</p>
+                            <p>3. Após andar em uma superfície plana por 30 minutos, você sente dor no Tendão de Aquiles nas próximas duas horas? (Se a dor impedir você de andar em uma superfícia plana por 30 minutos, marque 0 nessa questão).</p>
                             <div align="justify" class="text1" id="no-print">Dor forte ou severa</div>
 							<div align="right" class="text2" id="no-print">Sem dor</div>
 							<div id="no-print"><input type="range" min="0" max="10" value="0" class="slider" name="q3" id="range_q3"></div><p><span id="value_q3"></span></p>
                             <div id="no-print"><br></div>
                             <!-- Questão 4 -->
-                            <p>4. Você sente dor quando faz o exercício afundo com apoio de peso total?</p>
-                            <div class="image" align="center" id="no-print"><img src="../assets/img/afundo.png"></div>
+                            <p>4. Você sente dor descendo escadas em um ritmo normal?</p>
                             <div align="justify" class="text1" id="no-print">Dor forte ou severa</div>
 							<div align="right" class="text2" id="no-print">Sem dor</div>
 							<div id="no-print"><input type="range" min="0" max="10" value="0" class="slider" name="q4" id="range_q4"></div><p><span id="value_q4"></span></p>
                             <br>
                             <!-- Questão 5 -->
-                            <p>5. Você tem problemas ao agachar?</p>
-                            <div align="justify" class="text1" id="no-print">Incapaz</div>
-							<div align="right" class="text2" id="no-print">Sem problemas</div>
+                            <p>5. Você sente dor durante ou imediatamente após ficar nas pontas do pés, com apenas uma perna, por 10 vezes?</p>
+                            <div align="justify" class="text1" id="no-print">Dor forte ou severa</div>
+							<div align="right" class="text2" id="no-print">Sem dor</div>
 							<div id="no-print"><input type="range" min="0" max="10" value="0" class="slider" name="q5" id="range_q5"></div><p><span id="value_q5"></span></p>
                             <br>
                             <!-- Questão 6 -->
-                            <p>6. Você sente dor durante ou imediatamente após saltitar 10 vezes em uma perna só?</p>
-                            <div align="justify" class="text1" id="no-print">Dor forte ou severa</div>
-							<div align="right" class="text2" id="no-print">Sem dor</div>
+                            <p>6. Quantos pulos, com uma perna só, você consegue fazer sem sentir dor?</p>
 							<div id="no-print"><input type="range" min="0" max="10" value="0" class="slider" name="q6" id="range_q6"></div><p><span id="value_q6"></span></p>
                             <br>
                             <!-- Questão 7 -->
-                            <p>7. Atualmente, você está praticando algum esporte ou outro tipo de atividade física?</p>
+                            <p>7. Você está praticando algum esporte ou outra atividade física atualmente?</p>
                             <input type="radio" name="q7" id="q7i1" value="0" required>
                             <label for="q7i1">Não</label>
                             <br>
@@ -114,61 +111,61 @@ Repositório: https://github.com/mardesonH/PQOnline
                             <label for="q7i4">Competindo no mesmo nível ou nível mais alto do que quando os sintomas começaram</label>
                             <br>
                             <!-- Questão 8 -->
-                            <p>8. Por favor, complete somente uma das questões, A, B ou C, conforme a explicação abaixo:</p>
+                            <p>8. Por favor, complete somente uma das questões, A, B ou C nesta questão</p>
                             <ul><li>Se você não sente dor ao praticar esportes, por favor, responda somente a questão <b>8A</b></li></ul>
 							<ul><li>Se você sente dor ao praticar algum esporte, mas esta dor não o impede de praticar a atividade esportiva, por favor, responda somente a questão <b>8B</b></li></ul>
 							</b></li></ul>
 							<ul><li>Se você sente dor que o impede de praticar atividades esportivas, por favor, responda somente a questão <b>8C</b></li></ul>
 							<!-- Questão 8A -->
-                            <p>8A. Se você não sente dor ao praticar esportes, por quanto tempo você consegue treinar/praticar?</p>			
+                            <p>8A. Se você não sente dor enquanto pratica esportes que exigem carga no Tendão de Aquiles, por quanto tempo você consegue treinar/praticar?</p>			
                             <input type="radio" name="q8" id="q8ai1" value="0" required>
                             <label for="q8ai1">Não consigo treinar/praticar</label>
                             <br>
                             <input type="radio" name="q8" id="q8ai2"  value="07" required>
-                            <label for="q8ai2">0-5 minutos</label>
+                            <label for="q8ai2">1-10 minutos</label>
                             <br>
                             <input type="radio" name="q8" id="q8ai3"  value="14" required>
-                            <label for="q8ai3">6-10 minutos</label>
+                            <label for="q8ai3">11-20 minutos</label>
                             <br>
                             <input type="radio" name="q8" id="q8ai4"  value="21" required>
-                            <label for="q8ai4">11-15 minutos</label>
+                            <label for="q8ai4">21-30 minutos</label>
                             <br>
                             <input type="radio" name="q8" id="q8ai5"  value="30" required>
-                            <label for="q8ai5">Mais de 15 minutos</label>
+                            <label for="q8ai5">> 30 minutos</label>
                             <br>
                             <p><h3>OU</h3></p>
-                            <p>8B. Se você sente dor ao praticar esporte, mas a dor não o impede de completar/praticar a atividade esportiva, por quanto tempo você consegue treinar/praticar?</p>			
+                            <p>8B. Se você sente alguma dor enquanto pratica esportes que exigem carga no Tendão de Aquiles, mas isso não te impede de completar seu treinamento/prática, por quanto tempo você consegue treinar/praticar?</p>			
                             <input type="radio" name="q8" id="q8bi1" value="0" required>
                             <label for="q8bi1">Não consigo treinar/praticar</label>
                             <br>
                             <input type="radio" name="q8" id="q8bi2"  value="04" required>
-                            <label for="q8bi2">0-5 minutos</label>
+                            <label for="q8bi2">1-10 minutos</label>
                             <br>
                             <input type="radio" name="q8" id="q8bi3"  value="10" required>
-                            <label for="q8bi3">6-10 minutos</label>
+                            <label for="q8bi3">11-20 minutos</label>
                             <br>
-                            <input type="radio" name="q8" id="q8bi4"  value="10" required>
-                            <label for="q8bi4">11-15 minutos</label>
+                            <input type="radio" name="q8" id="q8bi4"  value="14" required>
+                            <label for="q8bi4">21-30 minutos</label>
                             <br>
                             <input type="radio" name="q8" id="q8bi5"  value="20" required>
-                            <label for="q8bi5">Mais de 15 minutos</label>
+                            <label for="q8bi5">> 30 minutos</label>
                             <br>
                             <p><h3>OU</h3></p>
-                            <p>8C. Se você sente dor que o impede de completar o seu treinamento/prática esportiva, por quanto tempo você consegue treinar/praticar?</p>			
+                            <p>8C. Se você sente dor que o impede de completar o seu treinamento/prática em esportes que exigem carga no Tendão de Aquiles, por quanto tempo você consegue treinar/praticar?</p>			
                             <input type="radio" name="q8" id="q8ci1" value="0" required>
                             <label for="q8ci1">Não consigo treinar/praticar</label>
                             <br>
                             <input type="radio" name="q8" id="q8ci2"  value="02" required>
-                            <label for="q8ci2">0-5 minutos</label>
+                            <label for="q8ci2">1-10 minutos</label>
                             <br>
                             <input type="radio" name="q8" id="q8ci3"  value="05" required>
-                            <label for="q8ci3">6-10 minutos</label>
+                            <label for="q8ci3">11-20 minutos</label>
                             <br>
                             <input type="radio" name="q8" id="q8ci4"  value="07" required>
-                            <label for="q8ci4">11-15 minutos</label>
+                            <label for="q8ci4">21-30 minutos</label>
                             <br>
                             <input type="radio" name="q8" id="q8ci5"  value="10" required>
-                            <label for="q8ci5">Mais de 15 minutos</label>
+                            <label for="q8ci5">> 30 minutos</label>
                             <br>
                             <hr class="divider" />
                             
@@ -189,7 +186,7 @@ Repositório: https://github.com/mardesonH/PQOnline
                      <hr>
                     <i style="font-size: 14px;">A pontuação total no VISA-P, que representa a gravidade da condição do entrevistado em termos numéricos, varia de 0 a 100 pontos, com uma pontuação máxima indicando a ausência de sintomas e incapacidade.</i></div>
                     <br>
-                    <div align="center"><a href="visa-p.html"><button class="btn btn-primary btn-xl">Repetir</button></a> <button class="btn btn-primary btn-xl" id="enviar" onclick="window.print()">Imprimir</button></div>
+                    <div align="center"><a href="visa-a.html"><button class="btn btn-primary btn-xl">Repetir</button></a> <button class="btn btn-primary btn-xl" id="enviar" onclick="window.print()">Imprimir</button></div>
                 </div>	
             </div>
         </div>
@@ -260,7 +257,7 @@ Repositório: https://github.com/mardesonH/PQOnline
 
         //Definir variáveis do formulário
 
-        var form = document.querySelector('#VISAP');
+        var form = document.querySelector('#VISAA');
         var botao = document.querySelector('#enviar');
         var quest = [
             q1 = 0,
@@ -298,10 +295,10 @@ Repositório: https://github.com/mardesonH/PQOnline
 
         //Calcular o resultado do questionário
         
-        var soma = parseInt(q1) + parseInt(q2) + parseInt(q3) + parseInt(q4) + parseInt(q5) + parseInt(q6) + parseInt(q7) + parseInt(q8)
+        var soma = (10 - parseInt(q1)) + parseInt(q2) + parseInt(q3) + parseInt(q4) + parseInt(q5) + parseInt(q6) + parseInt(q7) + parseInt(q8)
 
         nome = nome.toUpperCase();
-        document.getElementById('titulo').innerHTML = `<h2>VISA-P</h2> <br>RESULTADO ${nome}`
+        document.getElementById('titulo').innerHTML = `<h2>VISA-A</h2> <br>RESULTADO ${nome}`
         document.getElementById('result').innerText = `${soma} /100`
         document.getElementById('resultado_print').innerText = `RESULTADO: ${soma} /100`
         document.getElementById('chamar_result').click();
