@@ -1,6 +1,6 @@
 # **Physiotherapy Questionnaires Online**
 
-<img src="../logo.png" alt="Logo PQ Online">
+<img src="https://raw.githubusercontent.com/mardesonH/PQOnline/2.0/assets/img/Logo.png" alt="Logo PQ Online">
 
 Site *open source* desenvolvido por **Mardeson Herculano** para o uso de questionários de fisioterapia online, para a Liga de Fisioterapia Esportiva - Universidade Federal do Ceará.
 
