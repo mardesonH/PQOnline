@@ -257,7 +257,7 @@ Repositório: https://github.com/mardesonH/PQOnline
 
         var form = document.querySelector('#VISAA');
         var botao = document.querySelector('#enviar');
-        var quest = [
+        var quest = [ //Variável das questões
             q1 = 0,
             q2 = 0,
             q3 = 0,
@@ -268,7 +268,7 @@ Repositório: https://github.com/mardesonH/PQOnline
             q8 = 0
         ];
 
-        //Chamar a função 
+        //Listener para chamar a função
         botao.addEventListener('click', function (event) { //Evento de click no botão para chamar a função
         event.preventDefault();
         
@@ -280,7 +280,7 @@ Repositório: https://github.com/mardesonH/PQOnline
                 return;
             }
             
-        q1 = parseInt(form.q1.value);
+        q1 = 10 - (parseInt(form.q1.value));
         q2 = parseInt(form.q2.value);
         q3 = parseInt(form.q3.value);
         q4 = parseInt(form.q4.value);
@@ -291,7 +291,7 @@ Repositório: https://github.com/mardesonH/PQOnline
 
         //Calcular o resultado do questionário
         
-        var soma = (10 - parseInt(q1)) + parseInt(q2) + parseInt(q3) + parseInt(q4) + parseInt(q5) + parseInt(q6) + parseInt(q7) + parseInt(q8)
+        var soma = parseInt(q1) + parseInt(q2) + parseInt(q3) + parseInt(q4) + parseInt(q5) + parseInt(q6) + parseInt(q7) + parseInt(q8)
 
         nome = nome.toUpperCase();
         document.getElementById('titulo').innerHTML = `<h2>VISA-A</h2> <br>RESULTADO ${nome}`
