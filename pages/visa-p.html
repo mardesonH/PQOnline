@@ -1,0 +1,313 @@
+<!-- PHYSIOTHERAPY QUESTIONNAIRES ONLINE 2.0
+Desenvolvido por: Mardeson Herculano
+Repositório: https://github.com/mardesonH/PQOnline 
+-->
+<!DOCTYPE html>
+<html lang="Pt-Br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Questionários de Fisioterapia Online" />
+        <meta name="author" content="Mardeson Herculano" />
+        <title>VISA-P - PQ Online</title>
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body id="page-top">
+        <!-- Nav -->
+        <div id="no-print">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" style="background-color: #46867B;">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="../index.html">PQ Online</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../pages/tornozelo.html">Tornozelo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/joelho.html">Joelho</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/lombar.html">Lombar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/cotovelo.html">Cotovelo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/ombro.html">Ombro</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/cervical">Cervical</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/mardesonH/PQOnline" target="blank_">Sobre</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+        
+        <section class="page-section" id="topo">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                        <h2 class="mt-0">Victorian Institute of Sport Assessment - VISA-P </h2>
+                        <hr class="divider" />
+                        </div>
+
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                    <div class="col-lg-6">
+                        <form id="VISAP">
+                            <div class="form-floating mb-3">
+                                <div id="only_print">Nome do Paciente:</div>
+                                <input class="form-control" id="nome" type="text" placeholder="Nome do paciente" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Insira um nome</div>
+                            </div>
+                            <hr/>
+                            <div id="only_print" align="center"><div id="resultado_print" ></div>
+                                <br>
+                                <p style="font-size: 12px;"><i>A pontuação total no VISA-P, que representa a gravidade da condição do entrevistado em termos numéricos, varia de 0 a 100 pontos, com uma pontuação máxima indicando a ausência de sintomas e incapacidade.</i></p>
+                                
+                                <br><h4>Respostas</h4>
+                                <hr/>
+                            </div>
+                            <!-- Questão 1 -->
+                            <p>1. Por quantos minutos você consegue ficar sentado sem dor?</p>
+                            <div id="no-print"><input type="range" min="0" max="10" value="0" class="slider" name="q1" id="range_q1"></div><p><span id="value_q1"></span>0 min</p>
+                            <div id="no-print"><br></div>
+                            <!-- Questão 2 -->
+                            <p>2. Você sente dor ao descer escadas num ritmo de marcha normal?</p>
+                            <div align="justify" class="text1" id="no-print">Dor forte ou severa</div>
+							<div align="right" class="text2" id="no-print">Sem dor</div>
+							<div id="no-print"><input type="range" min="0" max="10" value="0" class="slider" name="q2" id="range_q2"></div><p><span id="value_q2"></span></p>
+                            <div id="no-print"><br></div>
+                            <!-- Questão 3 -->
+                            <p>3. Você sente dor no joelho quando o estende totalmente de forma ativa e com apoio de peso?</p>
+                            <div align="justify" class="text1" id="no-print">Dor forte ou severa</div>
+							<div align="right" class="text2" id="no-print">Sem dor</div>
+							<div id="no-print"><input type="range" min="0" max="10" value="0" class="slider" name="q3" id="range_q3"></div><p><span id="value_q3"></span></p>
+                            <div id="no-print"><br></div>
+                            <!-- Questão 4 -->
+                            <p>4. Você sente dor quando faz o exercício afundo com apoio de peso total?</p>
+                            <div class="image" align="center" id="no-print"><img src="../assets/img/afundo.png"></div>
+                            <div align="justify" class="text1" id="no-print">Dor forte ou severa</div>
+							<div align="right" class="text2" id="no-print">Sem dor</div>
+							<div id="no-print"><input type="range" min="0" max="10" value="0" class="slider" name="q4" id="range_q4"></div><p><span id="value_q4"></span></p>
+                            <br>
+                            <!-- Questão 5 -->
+                            <p>5. Você tem problemas ao agachar?</p>
+                            <div align="justify" class="text1" id="no-print">Incapaz</div>
+							<div align="right" class="text2" id="no-print">Sem problemas</div>
+							<div id="no-print"><input type="range" min="0" max="10" value="0" class="slider" name="q5" id="range_q5"></div><p><span id="value_q5"></span></p>
+                            <br>
+                            <!-- Questão 6 -->
+                            <p>6. Você sente dor durante ou imediatamente após saltitar 10 vezes em uma perna só?</p>
+                            <div align="justify" class="text1" id="no-print">Dor forte ou severa</div>
+							<div align="right" class="text2" id="no-print">Sem dor</div>
+							<div id="no-print"><input type="range" min="0" max="10" value="0" class="slider" name="q6" id="range_q6"></div><p><span id="value_q6"></span></p>
+                            <br>
+                            <!-- Questão 7 -->
+                            <p>7. Atualmente, você está praticando algum esporte ou outro tipo de atividade física?</p>
+                            <input type="radio" name="q7" id="q7i1" value="0" required>
+                            <label for="q7i1">Não</label>
+                            <br>
+                            <input type="radio" name="q7" id="q7i2"  value="04" required>
+                            <label for="q7i2">Treinamento e/ou competição com restrições</label>
+                            <br>
+                            <input type="radio" name="q7" id="q7i3"  value="07" required>
+                            <label for="q7i3">Treinamento sem restrição, mas não competindo no mesmo nível anterior ao início dos sintomas</label>
+                            <br>
+                            <input type="radio" name="q7" id="q7i4"  value="10" required>
+                            <label for="q7i4">Competindo no mesmo nível ou nível mais alto do que quando os sintomas começaram</label>
+                            <br>
+                            <!-- Questão 8 -->
+                            <p>8. Por favor, complete somente uma das questões, A, B ou C, conforme a explicação abaixo:</p>
+                            <ul><li>Se você não sente dor ao praticar esportes, por favor, responda somente a questão <b>8A</b></li></ul>
+							<ul><li>Se você sente dor ao praticar algum esporte, mas esta dor não o impede de praticar a atividade esportiva, por favor, responda somente a questão <b>8B</b></li></ul>
+							</b></li></ul>
+							<ul><li>Se você sente dor que o impede de praticar atividades esportivas, por favor, responda somente a questão <b>8C</b></li></ul>
+							<!-- Questão 8A -->
+                            <p>8A. Se você não sente dor ao praticar esportes, por quanto tempo você consegue treinar/praticar?</p>			
+                            <input type="radio" name="q8" id="q8ai1" value="0" required>
+                            <label for="q8ai1">Não consigo treinar/praticar</label>
+                            <br>
+                            <input type="radio" name="q8" id="q8ai2"  value="07" required>
+                            <label for="q8ai2">0-5 minutos</label>
+                            <br>
+                            <input type="radio" name="q8" id="q8ai3"  value="14" required>
+                            <label for="q8ai3">6-10 minutos</label>
+                            <br>
+                            <input type="radio" name="q8" id="q8ai4"  value="21" required>
+                            <label for="q8ai4">11-15 minutos</label>
+                            <br>
+                            <input type="radio" name="q8" id="q8ai5"  value="30" required>
+                            <label for="q8ai5">Mais de 15 minutos</label>
+                            <br>
+                            <p><h3>OU</h3></p>
+                            <p>8B. Se você sente dor ao praticar esporte, mas a dor não o impede de completar/praticar a atividade esportiva, por quanto tempo você consegue treinar/praticar?</p>			
+                            <input type="radio" name="q8" id="q8bi1" value="0" required>
+                            <label for="q8bi1">Não consigo treinar/praticar</label>
+                            <br>
+                            <input type="radio" name="q8" id="q8bi2"  value="04" required>
+                            <label for="q8bi2">0-5 minutos</label>
+                            <br>
+                            <input type="radio" name="q8" id="q8bi3"  value="10" required>
+                            <label for="q8bi3">6-10 minutos</label>
+                            <br>
+                            <input type="radio" name="q8" id="q8bi4"  value="10" required>
+                            <label for="q8bi4">11-15 minutos</label>
+                            <br>
+                            <input type="radio" name="q8" id="q8bi5"  value="20" required>
+                            <label for="q8bi5">Mais de 15 minutos</label>
+                            <br>
+                            <p><h3>OU</h3></p>
+                            <p>8C. Se você sente dor que o impede de completar o seu treinamento/prática esportiva, por quanto tempo você consegue treinar/praticar?</p>			
+                            <input type="radio" name="q8" id="q8ci1" value="0" required>
+                            <label for="q8ci1">Não consigo treinar/praticar</label>
+                            <br>
+                            <input type="radio" name="q8" id="q8ci2"  value="02" required>
+                            <label for="q8ci2">0-5 minutos</label>
+                            <br>
+                            <input type="radio" name="q8" id="q8ci3"  value="05" required>
+                            <label for="q8ci3">6-10 minutos</label>
+                            <br>
+                            <input type="radio" name="q8" id="q8ci4"  value="07" required>
+                            <label for="q8ci4">11-15 minutos</label>
+                            <br>
+                            <input type="radio" name="q8" id="q8ci5"  value="10" required>
+                            <label for="q8ci5">Mais de 15 minutos</label>
+                            <br>
+                            <hr class="divider" />
+                            
+                            <div id="no-print">
+                            <div class="d-grid"><button class="btn btn-primary btn-xl" id="enviar" type="submit">Enviar</button></div></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="no-print">
+        <div id="resultado" class="modalDialog">
+            <div>
+                <a href="#close" title="Close" class="close">X</a>
+                 <div class="coluna" align="center"><div id="titulo"></div><br>
+                     <div id="result" align="center" style="font-size: 20px;"></div>
+                     <hr>
+                    <i style="font-size: 14px;">A pontuação total no VISA-P, que representa a gravidade da condição do entrevistado em termos numéricos, varia de 0 a 100 pontos, com uma pontuação máxima indicando a ausência de sintomas e incapacidade.</i></div>
+                    <br>
+                    <div align="center"><a href="visa-p.html"><button class="btn btn-primary btn-xl">Repetir</button></a> <button class="btn btn-primary btn-xl" id="enviar" onclick="window.print()">Imprimir</button></div>
+                </div>	
+            </div>
+        </div>
+
+        <a href="#resultado" id="chamar_result">
+
+        <div id="no-print">
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Desenvolvido por <a href="http://github.com/mardesonH" target="blank_">Mardeson Herculano</a></div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+      
+
+        <script>
+        // Exibir valor do slider nas questões
+        var slider_q1 = document.getElementById("range_q1");
+        var output_q1 = document.getElementById("value_q1");
+        output_q1.innerHTML = slider_q1.value;
+
+        slider_q1.oninput = function() {
+         output_q1.innerHTML = this.value;
+        }
+
+        var slider_q2 = document.getElementById("range_q2");
+        var output_q2 = document.getElementById("value_q2");
+        output_q2.innerHTML = slider_q2.value;
+
+        slider_q2.oninput = function() {
+         output_q2.innerHTML = this.value;
+        }
+
+        var slider_q3 = document.getElementById("range_q3");
+        var output_q3 = document.getElementById("value_q3");
+        output_q3.innerHTML = slider_q3.value;
+
+        slider_q3.oninput = function() {
+         output_q3.innerHTML = this.value;
+        }
+
+        var slider_q4 = document.getElementById("range_q4");
+        var output_q4 = document.getElementById("value_q4");
+        output_q4.innerHTML = slider_q4.value;
+
+        slider_q4.oninput = function() {
+         output_q4.innerHTML = this.value;
+        }
+
+        var slider_q5 = document.getElementById("range_q5");
+        var output_q5 = document.getElementById("value_q5");
+        output_q5.innerHTML = slider_q5.value;
+
+        slider_q5.oninput = function() {
+         output_q5.innerHTML = this.value;
+        }
+
+        var slider_q6 = document.getElementById("range_q6");
+        var output_q6 = document.getElementById("value_q6");
+        output_q6.innerHTML = slider_q6.value;
+
+        slider_q6.oninput = function() {
+         output_q6.innerHTML = this.value;
+        }
+        </script>
+
+        <script>
+
+        //Definir variáveis do formulário
+
+        var form = document.querySelector('#VISAP');
+        var botao = document.querySelector('#enviar');
+        var quest = [
+            q1 = 0,
+            q2 = 0,
+            q3 = 0,
+            q4 = 0,
+            q5 = 0,
+            q6 = 0,
+            q7 = 0,
+            q8 = 0
+        ];
+
+        //Chamar a função 
+        botao.addEventListener('click', function (event) { //Evento de click no botão para chamar a função
+        event.preventDefault();
+        
+        // Avisar caso 'nome' esteja vazio
+        var nome = document.querySelector('#nome').value;
+            if(nome == ""){
+                window.alert('Preencha os dados!')
+                window.location.href = "#topo";
+                return;
+            }
+                
+        console.log(nome);
+
+        q1 = parseInt(form.q1.value);
+        q2 = parseInt(form.q2.value);
+        q3 = parseInt(form.q3.value);
+        q4 = parseInt(form.q4.value);
+        q5 = parseInt(form.q5.value);
+        q6 = parseInt(form.q6.value);
+        q7 = parseInt(form.q7.value);
+        q8 = parseInt(form.q8.value);
+
+        //Calcular o resultado do questionário
+        
+        var soma = parseInt(q1) + parseInt(q2) + parseInt(q3) + parseInt(q4) + parseInt(q5) + parseInt(q6) + parseInt(q7) + parseInt(q8)
+
+        nome = nome.toUpperCase();
+        document.getElementById('titulo').innerHTML = `<h2>VISA-P</h2> <br>RESULTADO ${nome}`
+        document.getElementById('result').innerText = `${soma} /100`
+        document.getElementById('resultado_print').innerText = `RESULTADO: ${soma} /100`
+        document.getElementById('chamar_result').click();
+
+    });
+        </script>
+    </div>
+    </body>
+</html>

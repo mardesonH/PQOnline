@@ -1,239 +1,163 @@
-<!DOCTYPE HTML>
-<!--
-	Criado por: Mardeson Herculano Acácio
-	Liga de Fisioterapia Esportiva
-	Universidade Federal do Ceará
+<!-- PHYSIOTHERAPY QUESTIONNAIRES ONLINE 2.0
+Desenvolvido por: Mardeson Herculano
+Repositório: https://github.com/mardesonH/PQOnline 
 -->
-<html>
+<!DOCTYPE html>
+<html lang="Pt-Br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Questionários de Fisioterapia Online" />
+        <meta name="author" content="Mardeson Herculano" />
+        <title>Physiotherapy Questionnaires Online</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
 
-<head>
-	<meta charset="utf-8" />
-	<title>Physiotherapy Questionnaires Online</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name="theme-color" content="#26564d">
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
-	<style>
-		/* Configuração do Loader */
-		#loader {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			z-index: 1;
-			width: 150px;
-			height: 150px;
-			margin: -75px 0 0 -75px;
-			border: 16px solid #f3f3f3;
-			border-radius: 50%;
-			border-top: 16px solid #47867b;
-			width: 120px;
-			height: 120px;
-			-webkit-animation: spin 2s linear infinite;
-			animation: spin 2s linear infinite;
-		}
+        </style>
 
-		@-webkit-keyframes spin {
-			0% {
-				-webkit-transform: rotate(0deg);
-			}
+    <body id="page-top">
 
-			100% {
-				-webkit-transform: rotate(360deg);
-			}
-		}
+        <!-- Nav-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" >
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">PQ Online</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../pages/tornozelo.html">Tornozelo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/joelho.html">Joelho</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/lombar.html">Lombar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/cotovelo.html">Cotovelo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/ombro.html">Ombro</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/cervical">Cervical</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/mardesonH/PQOnline" target="blank_">Sobre</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="loader"></div>
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <img src="logo.png" id="logo" alt="Physiotherapy Questionnaires Online">
+                        <h1 class="text-white font-weight-bold">Physiotherapy Questionnaires Online</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">Diversos questionários de fisioterapia reunidos e de graça em um só lugar!</p>
+                        <a class="btn btn-primary btn-xl" href="https://github.com/mardesonH/PQOnline" target="blank_">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Partes do corpo -->
+        <div id="portfolio">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="pages/tornozelo.html">
+                        <div class="portfolio-box" title="Tornozelo/Pé">
+                            <img class="img-fluid" src="assets/img/ankle.png" alt="Tornozelo/Pé" loading=lazy />
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Tornozelo/Pé</div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="pages/joelho.html">
+                        <div class="portfolio-box" title="Joelho">
+                            <img class="img-fluid" src="assets/img/knee.png" alt="Joelho" loading=lazy />
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Joelho</div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="pages/lombar.html">
+                        <div class="portfolio-box" title="Lombar">
+                            <img class="img-fluid" src="assets/img/lowback.png" alt="Lombar" loading=lazy />
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Lombar</div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!--<div class="col-lg-4 col-sm-6">
+                        <div class="portfolio-box" title="Cotovelo">
+                            <img class="img-fluid" src="assets/img/elbow.png" alt="Cotovelo" loading=lazy />
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Cotovelo</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="pages/ombro.html">
+                        <div class="portfolio-box" title="Project Name">
+                            <img class="img-fluid" src="assets/img/shoulder.png" alt="Ombro" loading=lazy />
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Ombro</div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="portfolio-box" title="Project Name">
+                            <img class="img-fluid" src="assets/img/neck.png" alt="Cervival" loading=lazy />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-name">Cervical</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
 
-		@keyframes spin {
-			0% {
-				transform: rotate(0deg);
-			}
+        <section class="page-section" id="sobre">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                        <h2 class="mt-0">O PQ Online</h2>
+                        <hr class="divider" />
+                        <p class="text-muted mb-5">O AppWeb Physiotherapy Questionnaires Online foi desenvolvido e adaptado a diferentes dispositivos pelo aluno de Fisioterapia da UFC Mardeson Herculano Acácio com apoio de Victor, aluno da Ciências da Computação e orientação dos Professores Pedro Lima, Gabriel Leão, Rodrigo Oliveira e Márcio Almeida.
 
-			100% {
-				transform: rotate(360deg);
-			}
-		}
+                            O aplicativo foi feito levando em base o Physiotherapy Questionnaires (PQ), desenvolvido para celulares Android em 2016 pelo também aluno da Fisioterapia, Nestor Neto.
+                            
+                            Visando reunir diversos questionários de fisioterapia, o Physiotherapy Questionnaires Online está em constante evolução e atualização, onde novos questionários serão adicionados conforme o projeto se desenvolve.</p>
+                    </div>
+                </div>
+                
+                <div class="row gx-4 gx-lg-5 justify-content-center" style="text-align: center;">
+                    Colabore com o projeto via Git Hub!
+                    <a href="https://github.com/mardesonH/PQOnline" target="blank_"><i class="fa fa-github" style="font-size:50px" ></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		.animate-bottom {
-			position: relative;
-			-webkit-animation-name: animatebottom;
-			-webkit-animation-duration: 1s;
-			animation-name: animatebottom;
-			animation-duration: 1s
-		}
-
-		@-webkit-keyframes animatebottom {
-			from {
-				bottom: -100px;
-				opacity: 0
-			}
-
-			to {
-				bottom: 0px;
-				opacity: 1
-			}
-		}
-
-		@keyframes animatebottom {
-			from {
-				bottom: -100px;
-				opacity: 0
-			}
-
-			to {
-				bottom: 0;
-				opacity: 1
-			}
-		}
-
-		#myDiv {
-			display: none;
-			text-align: center;
-		}
-	</style>
-
-</head>
-
-<body onload="myFunction()" style="margin:0;">
-
-	<div id="loader"></div>
-	<header id="header">
-		<h1 id="logo"><a href="index.html">PQ</a></h1>
-		<nav id="nav">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li>
-					<a href="">Questionários</a>
-					<ul>
-						<li><a href="geral/geral.html">Geral</a></li>
-						<li><a href="tornozelo/tornozelo.html">Tornozelo</a></li>
-						<li><a href="joelho/joelho.html">Joelho</a></li>
-						<li><a href="lombar/lombar.html">Lombar</a></li>
-						<li><a href="ombro/ombro.html">Ombro</a></li>
-						<li><a href="cotovelo/cotovelo.html">Cotovelo/Punho</a></li>
-						<li><a href="cervical/cervical.html">Cervical</a></li>
-					</ul>
-				</li>
-				<li><a href="sobre.html">Sobre Nós</a></li>
-				<li><a href="https://forms.gle/jX4jZ3SVMgvzu4ee8" target="_blank" rel="noopener">Reportar Erro</a></li>
-			</ul>
-		</nav>
-	</header>
-
-	<!--- Menu Inicial -->
-	<div style="display:none;" id="myDiv" class="animate-bottom">
-		<section id="four" class="wrapper style1 special fade-up">
-			<div class="container">
-				<div class="box alt">
-					<h2>Physiotherapy Questionnaires Online</h2>
-					<h5>Olá! Foram adicionados mais dois novos questionários! O <b>TAMPA (Cinesiofobia)</b> e o <b>PHQ-9
-							(Depressão)</b>.<p>Para acessá-los, é só ir na categoria "Geral". Espero que aproveitem! :D
-					</h5>
-					<div class="box alt">
-						<div class="row gtr-50 gtr-uniform">
-							<section class="col-4 col-6-xsmall">
-								<a href="geral/geral.html" class="image fit"><img src="assets/imgs/geral.png" alt="" />
-									<h3>Geral</h3>
-								</a>
-							</section>
-							<section class="col-4 col-6-xsmall">
-								<a href="tornozelo/tornozelo.html" class="image fit"><img src="assets/imgs/ankle.png"
-										alt="" />
-									<h3>Tornozelo/Pé</h3>
-								</a>
-							</section>
-							<section class="col-4 col-6-xsmall">
-								<a href="joelho/joelho.html" class="image fit"><img src="assets/imgs/knee.png" alt="" />
-									<h3>Joelho</h3>
-								</a>
-							</section>
-							<section class="col-4 col-6-xsmall">
-								<a href="lombar/lombar.html" class="image fit"><img src="assets/imgs/lowback.png"
-										alt="" />
-									<h3>Lombar</h3>
-								</a>
-							</section>
-							<section class="col-4 col-6-xsmall">
-								<a href="ombro/ombro.html" class="image fit"><img src="assets/imgs/shoulder.png"
-										alt="" />
-									<h3>Ombro</h3>
-								</a>
-							</section>
-							<section class="col-4 col-6-xsmall">
-								<a href="cotovelo/cotovelo.html" class="image fit"><img src="assets/imgs/elbow.png"
-										alt="" />
-									<h3>Cotovelo/Punho</h3>
-								</a>
-							</section>
-							<section class="col-4 col-6-xsmall">
-								<a href="cervical/cervical.html" class="image fit"><img src="assets/imgs/neck.png"
-										alt="" />
-									<h3>Cervical</h3>
-								</a>
-							</section>
-							<section class="col-4 col-6-xsmall">
-								<a class="image fit"><img src="assets/imgs/lungs.png" alt="" />
-									<h3>Respiratória</h3>
-								</a>
-							</section>
-							<section class="col-4 col-6-xsmall">
-								<a class="image fit"><img src="assets/imgs/woman.png" alt="" />
-									<h3>Saúde da Mulher</h3>
-								</a>
-							</section>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
-		<!-- Footer -->
-		<footer id="footer">
-			<ul class="icons">
-				<li><a href="http://instagram.com/lifeufc/" target="_blank" class="icon alt fa-instagram"
-						rel="noopener"><span class="label">Instagram</span></a></li>
-				<li><a href="mailto:lifeufc@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a>
-				</li>
-			</ul>
-			<ul class="copyright">
-				<li>Liga de Fisioterapia Esportiva - LIFE <p>Universidade Federal do Ceará</p>
-					<p>Todos os direitos reservados.</p>
-				</li>
-			</ul>
-			<ul class="icons">
-				<li><span class="image"><img src="assets/imgs/sop.png" alt="" /></span></li>
-			</ul>
-		</footer>
-
-	</div>
-	<!--- SCRIPTS --->
-
-	<script>
-
-
-		var myVar;
-
-		function myFunction() {
-			myVar = setTimeout(showPage, 1000);
-		}
-
-		function showPage() {
-			document.getElementById("loader").style.display = "none";
-			document.getElementById("myDiv").style.display = "block";
-		}
-	</script>
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.dropotron.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
-
-</body>
-
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Desenvolvido por <a href="http://github.com/mardesonH" target="blank_">Mardeson Herculano</a></div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
